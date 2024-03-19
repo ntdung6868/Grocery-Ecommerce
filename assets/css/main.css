@@ -1574,8 +1574,7 @@ html {
   margin-top: -7px;
 }
 .menu-column__item--active .sub-menu {
-  opacity: 1;
-  visibility: visible;
+  display: grid;
 }
 .menu-column__item--active > .menu-column__link, .menu-column__item:hover > .menu-column__link {
   color: #0071dc;
@@ -1591,13 +1590,10 @@ html {
 .sub-menu {
   position: absolute;
   inset: 0 0 0 var(--main-column-width);
-  display: grid;
+  display: none;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--inner-padding);
   padding-left: var(--inner-padding);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
   overflow-y: auto;
 }
 .sub-menu::-webkit-scrollbar {

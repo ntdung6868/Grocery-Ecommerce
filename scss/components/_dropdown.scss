@@ -94,8 +94,7 @@
 
     &__item {
         &--active .sub-menu {
-            opacity: 1;
-            visibility: visible;
+            display: grid;
         }
     }
 
@@ -116,15 +115,10 @@
 .sub-menu {
     position: absolute;
     inset: 0 0 0 var(--main-column-width);
-    display: grid;
+    display: none;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--inner-padding);
-
     padding-left: var(--inner-padding);
-
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
 
     overflow-y: auto;
     &::-webkit-scrollbar {
