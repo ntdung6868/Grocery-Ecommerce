@@ -180,6 +180,16 @@ select {
   filter: var(--icon-color);
 }
 
+::-webkit-scrollbar {
+  border-radius: 0;
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(22, 24, 35, 0.2);
+}
+
 .row > *, .container-fluid, .container {
   padding-left: calc(var(--grid-gutter-x) * 0.5);
   padding-right: calc(var(--grid-gutter-x) * 0.5);
@@ -1310,6 +1320,7 @@ html.dark {
   --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
   --dropdown-arrow-color: brightness(0) saturate(100%) invert(17%) sepia(27%)
       saturate(487%) hue-rotate(185deg) brightness(89%) contrast(88%);
+  --top-menu-border-color: #171c28;
 }
 
 html {
@@ -1323,6 +1334,7 @@ html {
   --top-act-group-separate: #ededf6;
   --dropdown-bg-color: #fff;
   --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
+  --top-menu-border-color: #d2d1d6;
 }
 @media (max-width: 991.98px) {
   html {
@@ -1485,17 +1497,20 @@ html {
 }
 
 .dropdown {
-  max-width: 1240px;
+  width: min(1240px, 100%);
   position: absolute;
   left: 0;
   padding-top: 54px;
-  opacity: 0;
-  visibility: hidden;
+  opacity: 1;
+  visibility: visible;
   transition: opacity 0.3s, visibility 0.3s;
 }
 .dropdown__inner {
+  --inner-max-height: min(582px, 100vh - 158px);
+  --inner-padding: 30px;
   position: relative;
-  padding: 30px;
+  max-height: var(--inner-max-height);
+  padding: var(--inner-padding);
   border-radius: 20px;
   background: var(--dropdown-bg-color);
   box-shadow: 0px 40px 90px 20px var(--dropdown-shadow-color);
@@ -1507,6 +1522,58 @@ html {
   left: var(--arrow-left-pos);
   translate: -50%;
   filter: var(--dropdown-arrow-color);
+}
+
+.top-menu__main {
+  width: 292px;
+  max-height: calc(var(--inner-max-height) - var(--inner-padding) * 2);
+  border-right: 1px solid var(--top-menu-border-color);
+  overflow-y: auto;
+}
+.top-menu__main::-webkit-scrollbar {
+  width: 3px;
+}
+
+.menu-column {
+  display: flex;
+  gap: 14px;
+}
+.menu-column__icon {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+}
+.menu-column__content {
+  flex-grow: 1;
+}
+.menu-column__icon-2 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.menu-column__heading {
+  display: block;
+  padding: 6px 0 19px;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 150%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--dropdown-bg-color);
+}
+.menu-column__link {
+  display: block;
+  padding: 7px 0;
+  font-size: 0.875rem;
+  line-height: 142.857%;
+}
+.menu-column__link:hover {
+  color: #0071dc;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=main.css.map */
