@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 %flexItemsCenter {
     display: flex;
     align-items: center;
@@ -10,15 +12,28 @@
 
 .top-bar {
     @extend %flexItemsCenter;
+
+    &__more {
+        width: 24px;
+        height: 24px;
+    }
 }
 
 .navbar {
     margin-left: 144px;
 
+    @include abstracts.breakpoint(xl) {
+        margin-left: 44px;
+    }
+
     &__list {
         @extend %flexItemsCenter;
 
         margin: 0 -15px;
+
+        @include abstracts.breakpoint(xl) {
+            margin: 0;
+        }
     }
 
     &__item {
@@ -41,6 +56,10 @@
     margin-left: auto;
     column-gap: 20px;
 
+    @include abstracts.breakpoint(xl) {
+        column-gap: 15px;
+    }
+
     &__group {
         @extend %flexItemsCenter;
 
@@ -48,6 +67,10 @@
         border-radius: 8px;
         background: var(--top-act-group-bg-color);
         box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow);
+
+        @include abstracts.breakpoint(xl) {
+            height: 40px;
+        }
     }
 
     &__btn {
@@ -56,16 +79,34 @@
         column-gap: 10px;
         padding: 10px 20px;
         cursor: pointer;
+
+        @include abstracts.breakpoint(xl) {
+            padding: 10px;
+        }
     }
 
     &__title {
         font-size: 0.9375rem;
         font-weight: 500;
         line-height: 146.667%;
+
+        @include abstracts.breakpoint(xl) {
+            font-size: 0.8375rem;
+        }
     }
 
     &__group--single &__btn {
         padding: 13px;
+
+        @include abstracts.breakpoint(xl) {
+            padding: 10px;
+        }
+    }
+
+    &__icon {
+        @include abstracts.breakpoint(xl) {
+            width: 20px;
+        }
     }
 
     &__separate {

@@ -1,11 +1,35 @@
+@use "../abstracts";
+
 .logo {
     display: flex;
     align-items: center;
     column-gap: 14px;
 
+    @include abstracts.breakpoint(lg) {
+        column-gap: 10px;
+        margin-left: auto;
+    }
+
     &__title {
         font-size: 1.375rem;
         font-weight: 700;
         line-height: 145.455%;
+
+        @include abstracts.breakpoint(lg) {
+            font-size: 1.2rem;
+        }
+        @include abstracts.breakpoint(sm) {
+            font-size: 1.125rem;
+        }
+    }
+
+    &__img {
+        @include abstracts.breakpoint(lg) {
+            width: 28px;
+        }
+
+        @include abstracts.breakpoint(sm) {
+            width: 24px;
+        }
     }
 }
