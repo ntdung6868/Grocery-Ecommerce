@@ -13,6 +13,8 @@
 .top-bar {
     @extend %flexItemsCenter;
 
+    position: relative;
+
     &__more {
         width: 24px;
         height: 24px;
@@ -37,13 +39,19 @@
     }
 
     &__item {
-        @extend %flexItemsCenter;
-
-        column-gap: 6px;
-        padding: 15px;
+        &:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+        }
     }
 
     &__link {
+        @extend %flexItemsCenter;
+
+        height: 50px;
+        column-gap: 6px;
+        padding: 15px;
+
         font-size: 0.9375rem;
         font-weight: 500;
         line-height: 146.667%;
