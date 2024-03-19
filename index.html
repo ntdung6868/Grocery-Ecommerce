@@ -37,19 +37,24 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="./assets/css/main.css" />
+
+        <!-- Scripts -->
+        <script src="./assets/js/scripts.js"></script>
     </head>
     <body>
-        <h1>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
-            reiciendis molestias eius est sit nobis, quia rerum perspiciatis
-            deserunt incidunt ullam quae qui tempore, ut sed dignissimos
-            voluptatem. Exercitationem, architecto?
-        </h1>
+        <!-- Header -->
+        <header id="header"></header>
+        <script>
+            load("#header", "./template/header.html");
+        </script>
+
+        <!-- Main -->
+        <h1>Home page</h1>
+
+        <!-- Footer -->
+        <footer id="footer"></footer>
+        <script>
+            load("#footer", "./template/footer.html");
+        </script>
     </body>
 </html>
-git init
-git add .
-git commit -m "Dựng base"
-git branch -M main
-git remote add origin https://github.com/ntdungqlqb/project-09.git
-git push -u origin main
