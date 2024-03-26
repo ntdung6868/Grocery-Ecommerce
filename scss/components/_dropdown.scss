@@ -27,6 +27,15 @@
         background: var(--dropdown-bg-color);
         box-shadow: 0px 40px 90px 20px var(--dropdown-shadow-color);
 
+        &::before {
+            content: url("../icons/dropdown-arrow.svg");
+            position: absolute;
+            top: -13px;
+            left: var(--arrow-left-pos);
+            translate: -50%;
+            filter: var(--dropdown-arrow-color);
+        }
+
         @include abstracts.breakpoint(lg) {
             padding: 6px 40px;
 
@@ -37,15 +46,6 @@
             &::before {
                 content: none;
             }
-        }
-
-        &::before {
-            content: url("../icons/dropdown-arrow.svg");
-            position: absolute;
-            top: -13px;
-            left: var(--arrow-left-pos);
-            translate: -50%;
-            filter: var(--dropdown-arrow-color);
         }
     }
 }
@@ -177,5 +177,10 @@
         grid-template-columns: repeat(4, 1fr);
         height: var(--max-inner-height);
         padding-left: 0;
+
+        @include abstracts.breakpoint(lg) {
+            height: auto;
+            grid-template-columns: 1fr;
+        }
     }
 }
