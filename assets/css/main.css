@@ -1380,7 +1380,7 @@ html {
   .navbar__list {
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 20px;
+    margin-top: 10px;
     height: calc(100% - 30px);
     overflow-y: auto;
   }
@@ -1395,6 +1395,16 @@ html {
 @media (max-width: 991.98px) {
   .navbar__item {
     width: 100%;
+    margin-top: 20px;
+  }
+  .navbar__item:hover .dropdown {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .navbar__item--active .dropdown {
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: initial;
   }
 }
 .navbar__link {
@@ -1412,7 +1422,7 @@ html {
     height: auto;
     font-size: 1rem;
     line-height: 150%;
-    background: var(--header-bg-color);
+    background: var(--dropdown-bg-color);
   }
 }
 @media (max-width: 575.98px) {
@@ -1426,8 +1436,9 @@ html {
     inset: 0 50% 0 0;
     z-index: 1;
     margin-left: 0;
-    padding: 20px 0;
-    background: #fff;
+    padding: 40px 0;
+    border-radius: 0 20px 20px 0;
+    background: var(--dropdown-bg-color);
     translate: -100%;
     transition: translate 0.5s;
   }
@@ -1438,22 +1449,29 @@ html {
     visibility: visible;
     opacity: 1;
   }
+  .navbar__arrow {
+    rotate: -90deg;
+    transition: rotate 0.2s;
+  }
+  .navbar__item--active .navbar__arrow {
+    rotate: 0deg;
+  }
 }
 @media (max-width: 575.98px) {
   .navbar {
     inset: 0 10% 0 0;
-    padding: 10px 0;
+    padding: 20px 0;
   }
 }
 @media (max-width: 991.98px) {
   .navbar__close-btn {
     display: block;
-    padding: 10px 50px;
+    padding: 0 40px;
   }
 }
 @media (max-width: 575.98px) {
   .navbar__close-btn {
-    padding: 10px 30px;
+    padding: 0 20px;
   }
 }
 .navbar__overlay {
@@ -1589,9 +1607,7 @@ html {
 @media (max-width: 991.98px) {
   .dropdown {
     padding-top: 0;
-    opacity: 1;
-    visibility: visible;
-    position: initial;
+    transition: opacity 0.1s, visibility 0.1s;
   }
 }
 .dropdown__inner {

@@ -11,10 +11,8 @@
 
     @include abstracts.breakpoint(lg) {
         padding-top: 0;
-
-        opacity: 1;
-        visibility: visible;
-        position: initial;
+        transition: opacity 0.1s, visibility 0.1s;
+        // position: initial;
     }
 
     &__inner {

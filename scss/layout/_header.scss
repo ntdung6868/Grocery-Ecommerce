@@ -40,7 +40,7 @@
         @include abstracts.breakpoint(lg) {
             flex-direction: column;
             align-items: flex-start;
-            margin-top: 20px;
+            margin-top: 10px;
 
             height: calc(100% - 30px);
             overflow-y: auto;
@@ -57,7 +57,18 @@
         }
 
         @include abstracts.breakpoint(lg) {
+            &:hover .dropdown {
+                opacity: 0;
+                visibility: hidden;
+            }
             width: 100%;
+            margin-top: 20px;
+
+            &--active .dropdown {
+                opacity: 1 !important;
+                visibility: visible !important;
+                position: initial;
+            }
         }
     }
 
@@ -78,7 +89,7 @@
             height: auto;
             font-size: 1rem;
             line-height: 150%;
-            background: var(--header-bg-color);
+            background: var(--dropdown-bg-color);
         }
 
         @include abstracts.breakpoint(sm) {
@@ -92,8 +103,9 @@
         z-index: 1;
 
         margin-left: 0;
-        padding: 20px 0;
-        background: #fff;
+        padding: 40px 0;
+        border-radius: 0 20px 20px 0;
+        background: var(--dropdown-bg-color);
 
         translate: -100%;
         transition: translate 0.5s;
@@ -106,21 +118,30 @@
             visibility: visible;
             opacity: 1;
         }
+
+        &__arrow {
+            rotate: -90deg;
+            transition: rotate 0.2s;
+        }
+
+        &__item--active &__arrow {
+            rotate: 0deg;
+        }
     }
 
     @include abstracts.breakpoint(sm) {
         inset: 0 10% 0 0;
-        padding: 10px 0;
+        padding: 20px 0;
     }
 
     &__close-btn {
         @include abstracts.breakpoint(lg) {
             display: block;
-            padding: 10px 50px;
+            padding: 0 40px;
         }
 
         @include abstracts.breakpoint(sm) {
-            padding: 10px 30px;
+            padding: 0 20px;
         }
     }
 
