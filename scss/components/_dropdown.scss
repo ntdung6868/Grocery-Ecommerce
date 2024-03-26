@@ -121,6 +121,7 @@
 
         @include abstracts.breakpoint(lg) {
             padding-bottom: 26px;
+            background: var(--sidebar-bg-color);
         }
     }
 
