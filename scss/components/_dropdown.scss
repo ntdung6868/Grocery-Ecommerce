@@ -9,6 +9,14 @@
     visibility: hidden;
     transition: opacity 0.3s, visibility 0.3s;
 
+    @include abstracts.breakpoint(lg) {
+        padding-top: 0;
+
+        opacity: 1;
+        visibility: visible;
+        position: initial;
+    }
+
     &__inner {
         --inner-padding: 30px;
 
@@ -18,6 +26,18 @@
         border-radius: 20px;
         background: var(--dropdown-bg-color);
         box-shadow: 0px 40px 90px 20px var(--dropdown-shadow-color);
+
+        @include abstracts.breakpoint(lg) {
+            padding: 6px 40px;
+
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
+
+            &::before {
+                content: none;
+            }
+        }
 
         &::before {
             content: url("../icons/dropdown-arrow.svg");
@@ -46,6 +66,12 @@
         &::-webkit-scrollbar {
             width: 3px;
         }
+
+        @include abstracts.breakpoint(lg) {
+            width: 100%;
+            height: auto;
+            border-right: none;
+        }
     }
 }
 
@@ -53,8 +79,15 @@
     display: flex;
     gap: 14px;
 
+    @include abstracts.breakpoint(lg) {
+        margin-top: 14px;
+    }
+
     + .menu-column {
         margin-top: var(--inner-padding);
+        @include abstracts.breakpoint(lg) {
+            margin-top: 23px;
+        }
     }
 
     &__icon {
@@ -87,6 +120,10 @@
         top: 0;
         z-index: 1;
         background: var(--dropdown-bg-color);
+
+        @include abstracts.breakpoint(lg) {
+            padding-bottom: 26px;
+        }
     }
 
     &__list {
@@ -124,6 +161,13 @@
     overflow-y: auto;
     &::-webkit-scrollbar {
         width: 3px;
+    }
+
+    @include abstracts.breakpoint(lg) {
+        padding-left: 0;
+        position: initial;
+        grid-template-columns: 1fr;
+        gap: 9px;
     }
 
     &--not-main {
