@@ -17,6 +17,13 @@
         <!-- Fonts -->
         <link rel="stylesheet" href="./assets/font/stylesheet.css" />
 
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&display=swap"
+            rel="stylesheet"
+        />
+
         <!-- Styles -->
         <link rel="stylesheet" href="./assets/css/main.css" />
 
@@ -31,7 +38,27 @@
         </script>
 
         <!-- Main -->
-        <h1>Home page</h1>
+        <main class="container">
+            <!-- Slideshow -->
+            <div class="slideshow">
+                <div class="slideshow__inner">
+                    <div class="slideshow__item">
+                        <a href="#!" class="slideshow__link">
+                            <picture>
+                                <source media="(max-width: 767.98px)" srcset="./assets/img/slideshow/item-1-md.png" />
+                                <img src="./assets/img/slideshow/item-1.png" alt="" class="slideshow__img" />
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="slideshow__page">
+                    <span class="slideshow__num">1</span>
+                    <span class="slideshow__slider"></span>
+                    <span class="slideshow__num">5</span>
+                </div>
+            </div>
+        </main>
 
         <!-- Footer -->
         <footer id="footer" class="footer"></footer>
