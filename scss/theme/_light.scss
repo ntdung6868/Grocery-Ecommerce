@@ -24,6 +24,17 @@ html {
     --cate-item__thum-bg-color: #fff;
     --cate-item__title-color: #000;
 
+    // Filter-btn
+    --filter-btn-color: #6c6c72;
+    --filter-btn-bg-color: #fff;
+    --like-btn-bg-color: #fff;
+    --like-btn-shadow-color: 0px 20px 60px rgba(124, 124, 124, 0.2);
+
+    // Product-card
+    --product-card-bg-color: #fff;
+    --product-card-shadow-color: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+    --product-card__brand-color: #9e9da8;
+
     @include abstracts.screen(lg) {
         --header-bg-color: #fff;
         --top-act-group-bg-color: #eee;
