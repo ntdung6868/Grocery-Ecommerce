@@ -42,7 +42,13 @@ select {
     color: inherit;
     font-family: inherit;
     outline: none;
+    border: none;
     -webkit-tap-highlight-color: transparent;
+}
+
+input,
+textarea {
+    background: transparent;
 }
 
 .icon {

@@ -175,7 +175,13 @@ select {
   color: inherit;
   font-family: inherit;
   outline: none;
+  border: none;
   -webkit-tap-highlight-color: transparent;
+}
+
+input,
+textarea {
+  background: transparent;
 }
 
 .icon {
@@ -2177,7 +2183,6 @@ html {
   height: 36px;
   font-size: 0.875rem;
   line-height: 142.857%;
-  background: transparent;
 }
 .filter__form-select-wrap {
   display: flex;
@@ -2216,6 +2221,26 @@ html {
 }
 .filter__form-tag:hover {
   color: var(--text-color);
+}
+.filter__form-search-wrap {
+  display: flex;
+  padding: 0 16px;
+  width: 334px;
+  border-radius: 6px;
+  border: 1px solid #d2d1d6;
+}
+.filter__form-search-input {
+  padding: 0 16px 0 0;
+  width: 100%;
+  height: 45px;
+  font-size: 0.9375rem;
+  line-height: 146.667%;
+}
+.filter__form-search-input::placeholder {
+  color: #9e9da8;
+}
+.filter__form-search-icon {
+  cursor: pointer;
 }
 .filter__row {
   display: flex;
