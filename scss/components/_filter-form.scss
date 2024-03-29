@@ -46,6 +46,8 @@
 
         &-slider {
             position: relative;
+            display: inline-block;
+            margin: 10px 0;
             width: 100%;
             height: 2px;
             background: #d2d1d6;
@@ -61,6 +63,7 @@
                 border-radius: 50%;
                 translate: 0 -50%;
                 background: var(--filter-bg-color);
+                cursor: pointer;
             }
 
             &::before {
@@ -72,19 +75,77 @@
             }
         }
 
+        &-input,
+        &-select-wrap {
+            border-radius: 6px;
+            border: 1px solid #d2d1d6;
+        }
+
         &-input {
             padding: 0 12px;
             width: 121px;
             height: 36px;
             font-size: 0.875rem;
             line-height: 142.857%;
+            background: transparent;
+        }
+
+        &-select-wrap {
+            display: flex;
+            align-items: center;
+            height: 45px;
+        }
+
+        &-select {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 14px;
+            min-width: var(--width, 108px);
+            height: calc(100% - 10px);
+            font-size: 0.875rem;
+            font-weight: 500;
+            line-height: 142.857%;
+            cursor: pointer;
+        }
+
+        &-select + &-select {
+            border-left: 1px solid #d2d1d6;
+        }
+
+        &-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 20px;
+        }
+
+        &-tag {
+            padding: 6px 12px;
             border-radius: 6px;
-            border: 1px solid #d2d1d6;
+            background: var(--filter__form-tag-bg-color);
+            color: #9e9da8;
+            font-size: 0.875rem;
+            font-weight: 500;
+            line-height: 142.857%;
+            transition: color 0.2s;
+
+            &:hover {
+                color: var(--text-color);
+            }
         }
     }
 
     &__row {
         display: flex;
-        align-items: flex-start;
+    }
+
+    &__separate {
+        width: 1px;
+        margin: 0 30px;
+        background: #eee;
+
+        &--small {
+            margin: 0 14px;
+        }
     }
 }

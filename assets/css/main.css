@@ -1347,6 +1347,7 @@ html.dark {
   --product-card-shadow-color: 0px 20px 60px 10px rgba(0, 0, 0, 0.2);
   --filter-bg-color: #292e39;
   --filter-shadow-color: 0px 40px 90px rgba(0, 0, 0, 0.4);
+  --filter__form-tag-bg-color: #171c28;
 }
 
 html {
@@ -1375,6 +1376,7 @@ html {
   --product-card__brand-color: #9e9da8;
   --filter-bg-color: #fff;
   --filter-shadow-color: 0px 40px 90px rgba(200, 200, 200, 0.4);
+  --filter__form-tag-bg-color: #f8f8fb;
 }
 @media (max-width: 991.98px) {
   html {
@@ -2141,6 +2143,8 @@ html {
 }
 .filter__form-slider {
   position: relative;
+  display: inline-block;
+  margin: 10px 0;
   width: 100%;
   height: 2px;
   background: #d2d1d6;
@@ -2155,6 +2159,7 @@ html {
   border-radius: 50%;
   translate: 0 -50%;
   background: var(--filter-bg-color);
+  cursor: pointer;
 }
 .filter__form-slider::before {
   left: 10%;
@@ -2162,18 +2167,66 @@ html {
 .filter__form-slider::after {
   left: 60%;
 }
+.filter__form-input, .filter__form-select-wrap {
+  border-radius: 6px;
+  border: 1px solid #d2d1d6;
+}
 .filter__form-input {
   padding: 0 12px;
   width: 121px;
   height: 36px;
   font-size: 0.875rem;
   line-height: 142.857%;
+  background: transparent;
+}
+.filter__form-select-wrap {
+  display: flex;
+  align-items: center;
+  height: 45px;
+}
+.filter__form-select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  min-width: var(--width, 108px);
+  height: calc(100% - 10px);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 142.857%;
+  cursor: pointer;
+}
+.filter__form-select + .filter__form-select {
+  border-left: 1px solid #d2d1d6;
+}
+.filter__form-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+.filter__form-tag {
+  padding: 6px 12px;
   border-radius: 6px;
-  border: 1px solid #d2d1d6;
+  background: var(--filter__form-tag-bg-color);
+  color: #9e9da8;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 142.857%;
+  transition: color 0.2s;
+}
+.filter__form-tag:hover {
+  color: var(--text-color);
 }
 .filter__row {
   display: flex;
-  align-items: flex-start;
+}
+.filter__separate {
+  width: 1px;
+  margin: 0 30px;
+  background: #eee;
+}
+.filter__separate--small {
+  margin: 0 14px;
 }
 
 .home__container {
