@@ -174,6 +174,7 @@ textarea,
 select {
   color: inherit;
   font-family: inherit;
+  outline: none;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -1344,6 +1345,8 @@ html.dark {
   --like-btn-shadow-color: 0px 20px 60px rgba(124, 124, 124, 0.2);
   --product-card-bg-color: #171c28;
   --product-card-shadow-color: 0px 20px 60px 10px rgba(0, 0, 0, 0.2);
+  --filter-bg-color: #292e39;
+  --filter-shadow-color: 0px 40px 90px rgba(0, 0, 0, 0.4);
 }
 
 html {
@@ -1370,6 +1373,8 @@ html {
   --product-card-bg-color: #fff;
   --product-card-shadow-color: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
   --product-card__brand-color: #9e9da8;
+  --filter-bg-color: #fff;
+  --filter-shadow-color: 0px 40px 90px rgba(200, 200, 200, 0.4);
 }
 @media (max-width: 991.98px) {
   html {
@@ -2091,6 +2096,84 @@ html {
 }
 .like-btn--liked .like-btn__icon {
   display: none;
+}
+
+.filter-wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.filter {
+  padding: 31px 30px;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  border-radius: 20px;
+  background: var(--filter-bg-color);
+  box-shadow: var(--filter-shadow-color);
+}
+.filter__heading {
+  font-size: 1.375rem;
+  font-weight: 500;
+  line-height: 145.455%;
+}
+.filter__form {
+  margin-top: 30px;
+}
+.filter__form-lable {
+  display: block;
+  font-size: 1.375rem;
+  font-weight: 500;
+  line-height: 145.455%;
+}
+.filter__form-lable--small {
+  margin-bottom: 10px;
+  font-size: 0.875rem;
+  line-height: 142.857%;
+}
+.filter__form-group {
+  margin-top: 20px;
+}
+.filter__form-group--inline {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+}
+.filter__form-slider {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: #d2d1d6;
+}
+.filter__form-slider::before, .filter__form-slider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  border: 6px solid #ffb700;
+  border-radius: 50%;
+  translate: 0 -50%;
+  background: var(--filter-bg-color);
+}
+.filter__form-slider::before {
+  left: 10%;
+}
+.filter__form-slider::after {
+  left: 60%;
+}
+.filter__form-input {
+  padding: 0 12px;
+  width: 121px;
+  height: 36px;
+  font-size: 0.875rem;
+  line-height: 142.857%;
+  border-radius: 6px;
+  border: 1px solid #d2d1d6;
+}
+.filter__row {
+  display: flex;
+  align-items: flex-start;
 }
 
 .home__container {
