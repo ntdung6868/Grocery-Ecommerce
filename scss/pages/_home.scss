@@ -37,5 +37,8 @@
 
     &__product {
         margin-top: 20px;
+        @include abstracts.screen(md) {
+            --grid-gutter-y: 20px;
+        }
     }
 }

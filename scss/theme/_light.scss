@@ -46,4 +46,6 @@ html {
     --filter-bg-color: #fff;
     --filter-shadow-color: 0px 40px 90px rgba(200, 200, 200, 0.4);
     --filter__form-tag-bg-color: #f8f8fb;
+    --filter__arrow-color: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(133deg)
+        brightness(101%) contrast(102%);
 }

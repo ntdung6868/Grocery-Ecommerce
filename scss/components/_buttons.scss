@@ -1,16 +1,77 @@
-// Filter button
-.filter-btn {
-    padding: 6px 12px;
-    display: flex;
-    align-items: center;
-    column-gap: 14px;
-    height: 36px;
-    color: var(--filter-btn-color);
-    font-size: 0.875rem;
-    font-weight: 700;
-    line-height: 142.857%;
+.btn {
+    padding: 0 20px;
+    height: 46px;
     border-radius: 6px;
-    background: var(--filter-btn-bg-color);
+    font-size: 1.125rem;
+    font-weight: 500;
+    background: #f8f8fb;
+    user-select: none;
+    color: #1a162e;
+
+    + .btn {
+        margin-left: 20px;
+    }
+
+    &--text {
+        background: transparent;
+        color: #9e9da8;
+        font-weight: 400;
+    }
+
+    &--primary {
+        background: #ffb700;
+    }
+
+    &--outline {
+        background: transparent;
+        border: 1px solid #d2d1d6;
+    }
+
+    &--rounded {
+        border-radius: 99px;
+        background: #ffb700;
+    }
+
+    &--disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+// Filter button
+.filter {
+    &-btn {
+        padding: 6px 12px;
+        display: flex;
+        align-items: center;
+        column-gap: 14px;
+        height: 36px;
+        color: var(--filter-btn-color);
+        font-size: 0.875rem;
+        font-weight: 700;
+        line-height: 142.857%;
+        border-radius: 6px;
+        background: var(--filter-btn-bg-color);
+    }
+
+    &__cancel-btn,
+    &__submit-btn {
+        height: 38px;
+        padding: 0 10px;
+    }
+
+    &__cancel-btn {
+        font-size: 0.9375rem;
+    }
+
+    &__submit-btn {
+        font-size: 0.875rem;
+        margin-left: 10px !important;
+    }
 }
 
 // Like button

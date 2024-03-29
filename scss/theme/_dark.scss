@@ -39,4 +39,6 @@ html.dark {
     --filter-bg-color: #292e39;
     --filter-shadow-color: 0px 40px 90px rgba(0, 0, 0, 0.4);
     --filter__form-tag-bg-color: #171c28;
+    --filter__arrow-color: brightness(0) saturate(100%) invert(13%) sepia(5%) saturate(2853%) hue-rotate(183deg)
+        brightness(93%) contrast(85%);
 }

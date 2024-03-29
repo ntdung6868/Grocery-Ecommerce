@@ -1354,6 +1354,8 @@ html.dark {
   --filter-bg-color: #292e39;
   --filter-shadow-color: 0px 40px 90px rgba(0, 0, 0, 0.4);
   --filter__form-tag-bg-color: #171c28;
+  --filter__arrow-color: brightness(0) saturate(100%) invert(13%) sepia(5%) saturate(2853%) hue-rotate(183deg)
+      brightness(93%) contrast(85%);
 }
 
 html {
@@ -1383,6 +1385,8 @@ html {
   --filter-bg-color: #fff;
   --filter-shadow-color: 0px 40px 90px rgba(200, 200, 200, 0.4);
   --filter__form-tag-bg-color: #f8f8fb;
+  --filter__arrow-color: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(133deg)
+      brightness(101%) contrast(102%);
 }
 @media (max-width: 991.98px) {
   html {
@@ -2072,6 +2076,43 @@ html {
   margin-left: 6px;
 }
 
+.btn {
+  padding: 0 20px;
+  height: 46px;
+  border-radius: 6px;
+  font-size: 1.125rem;
+  font-weight: 500;
+  background: #f8f8fb;
+  user-select: none;
+  color: #1a162e;
+}
+.btn + .btn {
+  margin-left: 20px;
+}
+.btn--text {
+  background: transparent;
+  color: #9e9da8;
+  font-weight: 400;
+}
+.btn--primary {
+  background: #ffb700;
+}
+.btn--outline {
+  background: transparent;
+  border: 1px solid #d2d1d6;
+}
+.btn--rounded {
+  border-radius: 99px;
+  background: #ffb700;
+}
+.btn--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+
 .filter-btn {
   padding: 6px 12px;
   display: flex;
@@ -2084,6 +2125,17 @@ html {
   line-height: 142.857%;
   border-radius: 6px;
   background: var(--filter-btn-bg-color);
+}
+.filter__cancel-btn, .filter__submit-btn {
+  height: 38px;
+  padding: 0 10px;
+}
+.filter__cancel-btn {
+  font-size: 0.9375rem;
+}
+.filter__submit-btn {
+  font-size: 0.875rem;
+  margin-left: 10px !important;
 }
 
 .like-btn {
@@ -2114,8 +2166,8 @@ html {
 .filter {
   padding: 31px 30px;
   position: absolute;
-  right: 0;
-  top: 50px;
+  right: 5px;
+  top: 61px;
   border-radius: 20px;
   background: var(--filter-bg-color);
   box-shadow: var(--filter-shadow-color);
@@ -2128,13 +2180,13 @@ html {
 .filter__form {
   margin-top: 30px;
 }
-.filter__form-lable {
+.filter__form-label {
   display: block;
   font-size: 1.375rem;
   font-weight: 500;
   line-height: 145.455%;
 }
-.filter__form-lable--small {
+.filter__form-label--small {
   margin-bottom: 10px;
   font-size: 0.875rem;
   line-height: 142.857%;
@@ -2253,6 +2305,17 @@ html {
 .filter__separate--small {
   margin: 0 14px;
 }
+.filter__footer {
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+.filter__arrow {
+  position: absolute;
+  width: 52.5px;
+  bottom: 100%;
+  right: 30px;
+  filter: var(--filter__arrow-color);
+}
 
 .home__container {
   margin-top: 40px;
@@ -2288,6 +2351,11 @@ html {
 }
 .home__product {
   margin-top: 20px;
+}
+@media (max-width: 767.98px) {
+  .home__product {
+    --grid-gutter-y: 20px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

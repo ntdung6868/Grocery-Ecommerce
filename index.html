@@ -132,18 +132,19 @@
                         </button>
 
                         <div class="filter">
+                            <img src="./assets/icons/arrow-up.png" alt="" class="filter__arrow" />
                             <h3 class="filter__heading">Filter</h3>
                             <form action="" class="filter__form">
                                 <div class="filter__row">
                                     <!-- Filter column 1 -->
                                     <div class="filter__col">
-                                        <label for="" class="filter__form-lable">Price</label>
+                                        <label for="" class="filter__form-label">Price</label>
                                         <div class="filter__form-group">
                                             <div class="filter__form-slider"></div>
                                         </div>
                                         <div class="filter__form-group filter__form-group--inline">
                                             <div>
-                                                <label for="" class="filter__form-lable filter__form-lable--small"
+                                                <label for="" class="filter__form-label filter__form-label--small"
                                                     >Minimum</label
                                                 >
                                                 <input
@@ -156,7 +157,7 @@
                                             </div>
 
                                             <div>
-                                                <label for="" class="filter__form-lable filter__form-lable--small"
+                                                <label for="" class="filter__form-label filter__form-label--small"
                                                     >Maximum</label
                                                 >
                                                 <input
@@ -172,7 +173,7 @@
                                     <div class="filter__separate"></div>
                                     <!-- Filter column 2 -->
                                     <div class="filter__col">
-                                        <label for="" class="filter__form-lable">Size/Weight</label>
+                                        <label for="" class="filter__form-label">Size/Weight</label>
                                         <div class="filter__form-group">
                                             <div class="filter__form-select-wrap">
                                                 <div class="filter__form-select" style="--width: 157px">
@@ -205,7 +206,7 @@
                                     <div class="filter__separate"></div>
                                     <!-- Filter column 3 -->
                                     <div class="filter__col">
-                                        <label for="" class="filter__form-lable">Brand</label>
+                                        <label for="" class="filter__form-label">Brand</label>
                                         <div class="filter__form-group">
                                             <div class="filter__form-search-wrap">
                                                 <input
@@ -231,11 +232,15 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="filter__row filter__footer">
+                                    <button class="btn btn--text filter__cancel-btn">Cancel</button>
+                                    <button class="btn btn--primary filter__submit-btn">Show Result</button>
+                                </div>
                             </form>
                         </div>
                     </div>
                 </div>
-                <div class="home__product row row-cols-4 row-cols-lg-2 row-cols-sm-1 g-3">
+                <div class="home__product row row-cols-4 row-cols-lg-2 row-cols-sm-1">
                     <!-- Product Card 1 -->
                     <div class="col">
                         <article class="product-card">
