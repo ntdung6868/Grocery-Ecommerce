@@ -2,7 +2,6 @@
 
 .filter-wrap {
     position: relative;
-    z-index: 1;
 }
 
 .filter {
@@ -13,6 +12,19 @@
     border-radius: 20px;
     background: var(--filter-bg-color);
     box-shadow: var(--filter-shadow-color);
+    transition: opacity, visibility;
+    transition-duration: 0.5s;
+    z-index: 1;
+
+    @include abstracts.screen(sm) {
+        width: 80vw;
+        padding: 30px 20px 20.5px;
+    }
+
+    &.hide {
+        opacity: 0;
+        visibility: hidden;
+    }
 
     &__heading {
         font-size: 1.375rem;
@@ -22,6 +34,10 @@
 
     &__form {
         margin-top: 30px;
+
+        @include abstracts.screen(md) {
+            margin-top: 20px;
+        }
 
         &-label {
             display: block;
@@ -89,11 +105,16 @@
             height: 36px;
             font-size: 0.875rem;
             line-height: 142.857%;
+
+            @include abstracts.screen(sm) {
+                width: 100%;
+            }
         }
 
         &-select-wrap {
             display: flex;
             align-items: center;
+            justify-content: space-between;
             height: 45px;
         }
 
@@ -103,21 +124,20 @@
             justify-content: space-between;
             padding: 0 14px;
             min-width: var(--width, 108px);
-            height: calc(100% - 10px);
             font-size: 0.875rem;
             font-weight: 500;
             line-height: 142.857%;
             cursor: pointer;
         }
 
-        &-select + &-select {
-            border-left: 1px solid #d2d1d6;
-        }
-
         &-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 10px 20px;
+
+            @include abstracts.screen(sm) {
+                gap: 6px 10px;
+            }
         }
 
         &-tag {
@@ -141,6 +161,10 @@
             width: 334px;
             border-radius: 6px;
             border: 1px solid #d2d1d6;
+
+            @include abstracts.screen(sm) {
+                width: 100%;
+            }
         }
 
         &-search-input {
@@ -170,7 +194,16 @@
         background: #eee;
 
         &--small {
-            margin: 0 14px;
+            width: 1px;
+            margin: 0;
+            height: 85%;
+            background: #d2d1d6;
+        }
+
+        @include abstracts.screen(xl) {
+            width: 100%;
+            margin: 20px 0;
+            padding: 0.5px 0;
         }
     }
 
@@ -185,5 +218,22 @@
         bottom: 100%;
         right: 30px;
         filter: var(--filter__arrow-color);
+    }
+
+    &__content {
+        margin-right: -30px;
+        padding-right: 30px;
+        @include abstracts.screen(xl) {
+            flex-direction: column;
+            max-height: calc(100vh - 350px);
+
+            overflow-y: auto;
+            overscroll-behavior: contain;
+        }
+
+        @include abstracts.screen(sm) {
+            margin-right: -20px;
+            padding-right: 20px;
+        }
     }
 }

@@ -46,9 +46,6 @@
             height: calc(100% - 40px);
             overflow-y: auto;
             overscroll-behavior: contain;
-            &::-webkit-scrollbar {
-                width: 3px;
-            }
         }
 
         @include abstracts.screen(md) {

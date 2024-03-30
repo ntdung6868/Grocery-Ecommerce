@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .btn {
     padding: 0 20px;
     height: 46px;
@@ -62,6 +64,10 @@
     &__submit-btn {
         height: 38px;
         padding: 0 10px;
+
+        @include abstracts.screen(sm) {
+            flex-grow: 1;
+        }
     }
 
     &__cancel-btn {

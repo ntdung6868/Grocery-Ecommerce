@@ -61,10 +61,6 @@
 
         overflow-y: auto;
 
-        &::-webkit-scrollbar {
-            width: 3px;
-        }
-
         @include abstracts.screen(lg) {
             width: 100%;
             height: auto;
@@ -158,9 +154,6 @@
     padding-left: var(--inner-padding);
 
     overflow-y: auto;
-    &::-webkit-scrollbar {
-        width: 3px;
-    }
 
     @include abstracts.screen(lg) {
         padding-left: 0;

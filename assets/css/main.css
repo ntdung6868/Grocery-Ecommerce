@@ -188,16 +188,6 @@ textarea {
   filter: var(--icon-color);
 }
 
-::-webkit-scrollbar {
-  border-radius: 0;
-  width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  background-color: rgba(22, 24, 35, 0.2);
-}
-
 @media (max-width: 575.98px) {
   .container {
     padding-left: 20px !important;
@@ -1441,9 +1431,6 @@ html {
     overflow-y: auto;
     overscroll-behavior: contain;
   }
-  .navbar__list::-webkit-scrollbar {
-    width: 3px;
-  }
 }
 @media (max-width: 767.98px) {
   .navbar__list {
@@ -1740,9 +1727,6 @@ html {
   border-right: 1px solid var(--top-menu-border-color);
   overflow-y: auto;
 }
-.top-menu__main::-webkit-scrollbar {
-  width: 3px;
-}
 @media (max-width: 991.98px) {
   .top-menu__main {
     width: 100%;
@@ -1826,9 +1810,6 @@ html {
   gap: var(--inner-padding);
   padding-left: var(--inner-padding);
   overflow-y: auto;
-}
-.sub-menu::-webkit-scrollbar {
-  width: 3px;
 }
 @media (max-width: 991.98px) {
   .sub-menu {
@@ -2130,6 +2111,11 @@ html {
   height: 38px;
   padding: 0 10px;
 }
+@media (max-width: 575.98px) {
+  .filter__cancel-btn, .filter__submit-btn {
+    flex-grow: 1;
+  }
+}
 .filter__cancel-btn {
   font-size: 0.9375rem;
 }
@@ -2160,7 +2146,6 @@ html {
 
 .filter-wrap {
   position: relative;
-  z-index: 1;
 }
 
 .filter {
@@ -2171,6 +2156,19 @@ html {
   border-radius: 20px;
   background: var(--filter-bg-color);
   box-shadow: var(--filter-shadow-color);
+  transition: opacity, visibility;
+  transition-duration: 0.5s;
+  z-index: 1;
+}
+@media (max-width: 575.98px) {
+  .filter {
+    width: 80vw;
+    padding: 30px 20px 20.5px;
+  }
+}
+.filter.hide {
+  opacity: 0;
+  visibility: hidden;
 }
 .filter__heading {
   font-size: 1.375rem;
@@ -2179,6 +2177,11 @@ html {
 }
 .filter__form {
   margin-top: 30px;
+}
+@media (max-width: 767.98px) {
+  .filter__form {
+    margin-top: 20px;
+  }
 }
 .filter__form-label {
   display: block;
@@ -2236,9 +2239,15 @@ html {
   font-size: 0.875rem;
   line-height: 142.857%;
 }
+@media (max-width: 575.98px) {
+  .filter__form-input {
+    width: 100%;
+  }
+}
 .filter__form-select-wrap {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 45px;
 }
 .filter__form-select {
@@ -2247,19 +2256,20 @@ html {
   justify-content: space-between;
   padding: 0 14px;
   min-width: var(--width, 108px);
-  height: calc(100% - 10px);
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 142.857%;
   cursor: pointer;
 }
-.filter__form-select + .filter__form-select {
-  border-left: 1px solid #d2d1d6;
-}
 .filter__form-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 10px 20px;
+}
+@media (max-width: 575.98px) {
+  .filter__form-tags {
+    gap: 6px 10px;
+  }
 }
 .filter__form-tag {
   padding: 6px 12px;
@@ -2280,6 +2290,11 @@ html {
   width: 334px;
   border-radius: 6px;
   border: 1px solid #d2d1d6;
+}
+@media (max-width: 575.98px) {
+  .filter__form-search-wrap {
+    width: 100%;
+  }
 }
 .filter__form-search-input {
   padding: 0 16px 0 0;
@@ -2303,7 +2318,17 @@ html {
   background: #eee;
 }
 .filter__separate--small {
-  margin: 0 14px;
+  width: 1px;
+  margin: 0;
+  height: 85%;
+  background: #d2d1d6;
+}
+@media (max-width: 1199.98px) {
+  .filter__separate {
+    width: 100%;
+    margin: 20px 0;
+    padding: 0.5px 0;
+  }
 }
 .filter__footer {
   margin-top: 20px;
@@ -2316,14 +2341,28 @@ html {
   right: 30px;
   filter: var(--filter__arrow-color);
 }
+.filter__content {
+  margin-right: -30px;
+  padding-right: 30px;
+}
+@media (max-width: 1199.98px) {
+  .filter__content {
+    flex-direction: column;
+    max-height: calc(100vh - 350px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+}
+@media (max-width: 575.98px) {
+  .filter__content {
+    margin-right: -20px;
+    padding-right: 20px;
+  }
+}
 
 .home__container {
   margin-top: 40px;
-}
-@media (max-width: 767.98px) {
-  .home__container {
-    margin-top: 30px;
-  }
+  --grid-gutter-y: 30px;
 }
 .home__heading {
   font-size: 1.5rem;
@@ -2351,11 +2390,6 @@ html {
 }
 .home__product {
   margin-top: 20px;
-}
-@media (max-width: 767.98px) {
-  .home__product {
-    --grid-gutter-y: 20px;
-  }
 }
 
 /*# sourceMappingURL=main.css.map */
