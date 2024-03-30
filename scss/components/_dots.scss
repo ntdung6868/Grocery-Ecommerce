@@ -1,0 +1,23 @@
+.dots {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 16px;
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+    background: #d2d2d2;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &--active {
+        width: 10px;
+        height: 10px;
+        background: #ffb700;
+        outline: 1px solid #ffb700;
+        outline-offset: 3px;
+    }
+}

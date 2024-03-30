@@ -1,6 +1,32 @@
 @use "../abstracts";
 
 .home {
+    display: grid;
+    grid-template-columns: 18.6567164179% 79.1044776119%;
+    overflow: hidden;
+
+    &__content {
+        margin-left: -23.48%;
+        transition: margin-left 0.3s, margin-top 0.3s;
+
+        @include abstracts.screen(xl) {
+            margin-left: 0;
+            margin-top: -14%;
+        }
+
+        @include abstracts.screen(lg) {
+            margin-top: -18%;
+        }
+
+        @include abstracts.screen(md) {
+            margin-top: -25%;
+        }
+
+        @include abstracts.screen(sm) {
+            margin-top: -40%;
+        }
+    }
+
     &__container {
         margin-top: 40px;
         --grid-gutter-y: 30px;
@@ -34,5 +60,51 @@
 
     &__product {
         margin-top: 20px;
+    }
+
+    &__category {
+        margin-top: 40px;
+        padding-right: 30px;
+        translate: -100%;
+        transition: translate 0.3s;
+
+        @include abstracts.screen(xl) {
+            translate: 0 -156%;
+            padding-right: 0;
+        }
+
+        &.show {
+            translate: 0;
+
+            & + .home__content {
+                margin-left: 0;
+
+                @include abstracts.screen(xl) {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        &-list {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            @include abstracts.screen(xl) {
+                flex-direction: row;
+                overflow-y: auto;
+                padding-bottom: 10px;
+                margin-bottom: -10px;
+            }
+        }
+    }
+
+    section[class~="show"] + &__content &__cate-xxl {
+        display: none;
+    }
+
+    @include abstracts.screen(xl) {
+        grid-template-columns: 100%;
     }
 }
