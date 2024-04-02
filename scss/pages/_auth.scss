@@ -1,10 +1,13 @@
+@use "../abstracts";
+
 .auth {
     min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     background: var(--auth-bg-color);
 
     &__intro {
+        position: relative;
+        flex-grow: 1;
         padding: 0 30px;
         display: flex;
         align-items: center;
@@ -24,12 +27,46 @@
             font-size: 1.125rem;
             font-weight: 500;
             line-height: 144.444%;
+
+            @include abstracts.screen(md) {
+                font-size: 0.9375rem;
+                line-height: 146.667%;
+            }
+        }
+
+        &-logo,
+        &-next {
+            position: absolute;
+            left: 50%;
+            translate: -50%;
+        }
+
+        &-logo {
+            top: 80px;
+        }
+
+        &-next {
+            bottom: 50px;
+
+            &-img {
+                height: 18px;
+            }
         }
     }
 
     &__content {
+        flex-grow: 1;
         background: var(--auth__content-bg-color);
         padding: 50px 30px;
+
+        @include abstracts.screen(md) {
+            position: fixed;
+            inset: 0;
+            z-index: 1;
+            translate: 100%;
+            transition: translate 0.8s;
+            overflow-y: auto;
+        }
 
         &-inner {
             margin: 0 auto;
@@ -39,6 +76,10 @@
             justify-content: center;
             flex-direction: column;
         }
+
+        &.show {
+            translate: 0;
+        }
     }
 
     &__heading {
@@ -46,6 +87,11 @@
         font-size: 1.875rem;
         font-weight: 500;
         line-height: 146.667%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.375rem;
+            line-height: 145.455%;
+        }
     }
 
     &__desc {
@@ -55,6 +101,11 @@
         font-size: 0.9375rem;
         font-weight: 500;
         line-height: 146.667%;
+
+        @include abstracts.screen(md) {
+            font-size: 0.875rem;
+            line-height: 142.857%;
+        }
     }
 
     &__form {
@@ -85,6 +136,12 @@
         line-height: 144.444%;
         display: flex;
         column-gap: 10px;
+
+        @include abstracts.screen(md) {
+            margin-top: 56px;
+            font-size: 1rem;
+            line-height: 150%;
+        }
     }
 
     &__link {
@@ -92,5 +149,10 @@
         font-weight: 500;
         line-height: 144.444%;
         color: #0071dc;
+
+        @include abstracts.screen(md) {
+            font-size: 1rem;
+            line-height: 150%;
+        }
     }
 }
