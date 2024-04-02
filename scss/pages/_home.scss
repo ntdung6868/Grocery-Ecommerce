@@ -2,12 +2,20 @@
 
 .home {
     display: grid;
-    grid-template-columns: 18.6567164179% 79.1044776119%;
+    grid-template-columns: 250px 1fr;
     overflow: hidden;
 
+    @include abstracts.screen(xxl) {
+        grid-template-columns: 200px 1fr;
+    }
+
     &__content {
-        margin-left: -23.48%;
+        margin-left: -250px;
         transition: margin-left 0.3s, margin-top 0.3s;
+
+        @include abstracts.screen(xxl) {
+            margin-left: -200px;
+        }
 
         @include abstracts.screen(xl) {
             margin-left: 0;

@@ -20,6 +20,17 @@
         width: 24px;
         height: 24px;
     }
+
+    & .logo {
+        @include abstracts.screen(lg) {
+            column-gap: 10px;
+            margin-left: 50px;
+        }
+
+        @include abstracts.screen(md) {
+            margin-left: auto;
+        }
+    }
 }
 
 .navbar {
