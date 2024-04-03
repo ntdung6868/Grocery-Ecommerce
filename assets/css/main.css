@@ -3058,7 +3058,7 @@ section[class~=show] + .home__content .home__cate-xxl {
   }
 }
 .auth__form-forgot {
-  margin-top: 0;
+  margin-top: 10px;
 }
 .auth__btn-group {
   margin-top: 50px;
