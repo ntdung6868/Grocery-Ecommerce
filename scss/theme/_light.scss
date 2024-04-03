@@ -56,7 +56,9 @@ html {
     // Auth
     --auth-bg-color: #fafafd;
     --auth__content-bg-color: #fff;
-
+    --auth__intro-text-color: #1a162e;
+    --auth__heading-color: #1a162e;
+    
     @include abstracts.screen(md) {
         --auth-bg-color: #fff;
     }

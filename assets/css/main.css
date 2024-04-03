@@ -1360,6 +1360,8 @@ html.dark {
   --footer-bg-color: #171c28;
   --auth-bg-color: #171c28;
   --auth__content-bg-color: #292e39;
+  --auth__intro-text-color: #b9babe;
+  --auth__heading-color: #b9babe;
   --btn-outline-color: #b9babe;
 }
 
@@ -1396,6 +1398,8 @@ html {
   --footer-bg-color: #eee;
   --auth-bg-color: #fafafd;
   --auth__content-bg-color: #fff;
+  --auth__intro-text-color: #1a162e;
+  --auth__heading-color: #1a162e;
   --btn-outline-color: #1a162e;
 }
 @media (max-width: 991.98px) {
@@ -2694,6 +2698,11 @@ html {
     margin-top: 18px;
   }
 }
+.form__group--inline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__text-input {
   border-color: #ed4337;
   background: rgba(237, 67, 55, 0.1);
@@ -2772,13 +2781,13 @@ html {
   border-color: #ffb700;
 }
 .form__checkbox:has(:checked)::after {
-  left: 3.5px;
+  left: 3.3px;
   width: 12.5px;
   height: 6.5px;
-  border: 2.5px solid;
+  border: 2px solid;
   border-color: transparent transparent #fff #fff;
   rotate: -45deg;
-  translate: 0 -80%;
+  translate: 0 -91%;
 }
 .form__checkbox-label {
   margin-left: 29px;
@@ -2942,6 +2951,7 @@ section[class~=show] + .home__content .home__cate-xxl {
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 144.444%;
+  color: var(--auth__intro-text-color);
 }
 @media (max-width: 767.98px) {
   .auth__intro-text {
@@ -2999,6 +3009,7 @@ section[class~=show] + .home__content .home__cate-xxl {
   font-size: 1.875rem;
   font-weight: 500;
   line-height: 146.667%;
+  color: var(--auth__heading-color);
 }
 @media (max-width: 767.98px) {
   .auth__heading {
@@ -3077,14 +3088,13 @@ section[class~=show] + .home__content .home__cate-xxl {
   }
 }
 .auth__link {
-  font-size: 1.125rem;
+  font-size: inherit;
   font-weight: 500;
   line-height: 144.444%;
   color: #0071dc;
 }
 @media (max-width: 767.98px) {
   .auth__link {
-    font-size: 1rem;
     line-height: 150%;
   }
 }
