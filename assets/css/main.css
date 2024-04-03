@@ -2804,6 +2804,19 @@ html {
   }
 }
 
+.messages {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-align: left;
+}
+.messages--success {
+  border: 1px solid #5bc45f;
+  background: rgba(39, 243, 117, 0.2);
+}
+
 .home {
   display: grid;
   grid-template-columns: 250px 1fr;
@@ -2933,7 +2946,7 @@ section[class~=show] + .home__content .home__cate-xxl {
 }
 .auth__intro {
   position: relative;
-  flex-grow: 1;
+  flex: 1;
   padding: 0 30px;
   display: flex;
   align-items: center;
@@ -2974,7 +2987,7 @@ section[class~=show] + .home__content .home__cate-xxl {
   height: 18px;
 }
 .auth__content {
-  flex-grow: 1;
+  flex: 1;
   background: var(--auth__content-bg-color);
   padding: 50px 30px;
 }
@@ -3044,6 +3057,9 @@ section[class~=show] + .home__content .home__cate-xxl {
     margin-top: 15px;
   }
 }
+.auth__form-forgot {
+  margin-top: 0;
+}
 .auth__btn-group {
   margin-top: 50px;
 }
@@ -3097,6 +3113,9 @@ section[class~=show] + .home__content .home__cate-xxl {
   .auth__link {
     line-height: 150%;
   }
+}
+.auth__messages {
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */

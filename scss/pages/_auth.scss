@@ -12,7 +12,7 @@
 
     &__intro {
         position: relative;
-        flex-grow: 1;
+        flex: 1;
         padding: 0 30px;
         display: flex;
         align-items: center;
@@ -60,7 +60,7 @@
     }
 
     &__content {
-        flex-grow: 1;
+        flex: 1;
         background: var(--auth__content-bg-color);
         padding: 50px 30px;
 
@@ -128,6 +128,10 @@
         @include abstracts.screen(sm) {
             margin-top: 15px;
         }
+
+        &-forgot {
+            margin-top: 0;
+        }
     }
 
     &__btn-group {
@@ -183,5 +187,9 @@
         @include abstracts.screen(md) {
             line-height: 150%;
         }
+    }
+
+    &__messages {
+        margin-top: 30px;
     }
 }
