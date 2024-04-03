@@ -101,7 +101,8 @@
         &-item {
             width: 35px;
             height: 35px;
-            border-radius: 50%;
+            border-radius: 5px;
+            overflow: hidden;
             transition: scale 0.3s;
 
             &:hover {

@@ -2,6 +2,11 @@
 
 .auth {
     min-height: 100vh;
+
+    @supports (-webkit-touch-callout: none) {
+        min-height: -webkit-fill-available;
+    }
+
     display: flex;
     background: var(--auth-bg-color);
 
@@ -23,7 +28,6 @@
         &-text {
             max-width: 412px;
             text-align: center;
-            color: var(--Secondary-Color-Secondary-1, #1a162e);
             font-size: 1.125rem;
             font-weight: 500;
             line-height: 144.444%;

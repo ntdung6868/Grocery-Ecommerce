@@ -30,6 +30,25 @@
         @include abstracts.screen(md) {
             margin-left: auto;
         }
+
+        &__title {
+            @include abstracts.screen(lg) {
+                font-size: 1.2rem;
+            }
+            @include abstracts.screen(sm) {
+                font-size: 1.125rem;
+            }
+        }
+
+        &__img {
+            @include abstracts.screen(lg) {
+                width: 28px;
+            }
+
+            @include abstracts.screen(sm) {
+                width: 24px;
+            }
+        }
     }
 }
 

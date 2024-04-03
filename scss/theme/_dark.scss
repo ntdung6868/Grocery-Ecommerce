@@ -1,7 +1,7 @@
 html.dark {
     --text-color: #fff;
-    --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7482%) hue-rotate(72deg) brightness(99%)
-        contrast(99%);
+    --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%)
+        saturate(7482%) hue-rotate(72deg) brightness(99%) contrast(99%);
     --body-bg: #292e39;
     --header-bg-color: #171c28;
     --top-act-group-bg-color: #292e39;
@@ -11,8 +11,8 @@ html.dark {
     // Dropdown
     --dropdown-bg-color: #2f3441;
     --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
-    --dropdown-arrow-color: brightness(0) saturate(100%) invert(17%) sepia(27%) saturate(487%) hue-rotate(185deg)
-        brightness(89%) contrast(88%);
+    --dropdown-arrow-color: brightness(0) saturate(100%) invert(17%) sepia(27%)
+        saturate(487%) hue-rotate(185deg) brightness(89%) contrast(88%);
 
     --top-menu-border-color: #171c28;
 
@@ -24,8 +24,7 @@ html.dark {
     --cate-item-bg-color: #171c28;
     --cate-item__thum-bg-color: #292e39;
     --cate-item__title-color: #fff;
-    --cate-item-small-shadow-color: 0px 20px 60px 10px rgba(0, 0, 0, 0.20);
-
+    --cate-item-small-shadow-color: 0px 20px 60px 10px rgba(0, 0, 0, 0.2);
 
     // Filter-btn
     --filter-btn-color: #fff;
@@ -41,6 +40,16 @@ html.dark {
     --filter-bg-color: #292e39;
     --filter-shadow-color: 0px 40px 90px rgba(0, 0, 0, 0.4);
     --filter__form-tag-bg-color: #171c28;
-    --filter__arrow-color: brightness(0) saturate(100%) invert(13%) sepia(5%) saturate(2853%) hue-rotate(183deg)
-        brightness(93%) contrast(85%);
+    --filter__arrow-color: brightness(0) saturate(100%) invert(13%) sepia(5%)
+        saturate(2853%) hue-rotate(183deg) brightness(93%) contrast(85%);
+
+    // Footer
+    --footer-bg-color: #171c28;
+
+    // Auth
+    --auth-bg-color: #171c28;
+    --auth__content-bg-color: #292e39;
+
+    // Btn
+    --btn-outline-color: #b9babe;
 }

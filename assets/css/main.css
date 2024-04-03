@@ -141,8 +141,8 @@ table {
 
 :root {
   --text-color: #1a162e;
-  --icon-color: brightness(0) saturate(100%) invert(8%) sepia(10%) saturate(4042%) hue-rotate(212deg) brightness(90%)
-      contrast(95%);
+  --icon-color: brightness(0) saturate(100%) invert(8%) sepia(10%)
+      saturate(4042%) hue-rotate(212deg) brightness(90%) contrast(95%);
 }
 
 body {
@@ -170,6 +170,7 @@ button {
 a,
 button,
 input,
+label,
 textarea,
 select {
   color: inherit;
@@ -1327,8 +1328,8 @@ input:-webkit-autofill:hover {
 }
 html.dark {
   --text-color: #fff;
-  --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7482%) hue-rotate(72deg) brightness(99%)
-      contrast(99%);
+  --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%)
+      saturate(7482%) hue-rotate(72deg) brightness(99%) contrast(99%);
   --body-bg: #292e39;
   --header-bg-color: #171c28;
   --top-act-group-bg-color: #292e39;
@@ -1336,15 +1337,15 @@ html.dark {
   --top-act-group-separate: #ededf6;
   --dropdown-bg-color: #2f3441;
   --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
-  --dropdown-arrow-color: brightness(0) saturate(100%) invert(17%) sepia(27%) saturate(487%) hue-rotate(185deg)
-      brightness(89%) contrast(88%);
+  --dropdown-arrow-color: brightness(0) saturate(100%) invert(17%) sepia(27%)
+      saturate(487%) hue-rotate(185deg) brightness(89%) contrast(88%);
   --top-menu-border-color: #171c28;
   --sidebar-bg-color: #292e39;
   --sidebar-shadow: 0px 40px 90px 20px rgba(23, 28, 40, 0.4);
   --cate-item-bg-color: #171c28;
   --cate-item__thum-bg-color: #292e39;
   --cate-item__title-color: #fff;
-  --cate-item-small-shadow-color: 0px 20px 60px 10px rgba(0, 0, 0, 0.20);
+  --cate-item-small-shadow-color: 0px 20px 60px 10px rgba(0, 0, 0, 0.2);
   --filter-btn-color: #fff;
   --filter-btn-bg-color: #171c28;
   --like-btn-bg-color: #292e39;
@@ -1354,14 +1355,18 @@ html.dark {
   --filter-bg-color: #292e39;
   --filter-shadow-color: 0px 40px 90px rgba(0, 0, 0, 0.4);
   --filter__form-tag-bg-color: #171c28;
-  --filter__arrow-color: brightness(0) saturate(100%) invert(13%) sepia(5%) saturate(2853%) hue-rotate(183deg)
-      brightness(93%) contrast(85%);
+  --filter__arrow-color: brightness(0) saturate(100%) invert(13%) sepia(5%)
+      saturate(2853%) hue-rotate(183deg) brightness(93%) contrast(85%);
+  --footer-bg-color: #171c28;
+  --auth-bg-color: #171c28;
+  --auth__content-bg-color: #292e39;
+  --btn-outline-color: #b9babe;
 }
 
 html {
   --text-color: #1a162e;
-  --icon-color: brightness(0) saturate(100%) invert(8%) sepia(10%) saturate(4042%) hue-rotate(212deg) brightness(90%)
-      contrast(95%);
+  --icon-color: brightness(0) saturate(100%) invert(8%) sepia(10%)
+      saturate(4042%) hue-rotate(212deg) brightness(90%) contrast(95%);
   --body-bg: #f6f6f6;
   --header-bg-color: #eee;
   --top-act-group-bg-color: #fff;
@@ -1386,12 +1391,12 @@ html {
   --filter-bg-color: #fff;
   --filter-shadow-color: 0px 40px 90px rgba(200, 200, 200, 0.4);
   --filter__form-tag-bg-color: #f8f8fb;
-  --filter__arrow-color: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(133deg)
-      brightness(101%) contrast(102%);
+  --filter__arrow-color: brightness(0) saturate(100%) invert(100%) sepia(100%)
+      saturate(0%) hue-rotate(133deg) brightness(101%) contrast(102%);
   --footer-bg-color: #eee;
   --auth-bg-color: #fafafd;
   --auth__content-bg-color: #fff;
-  --form__text-input-color: #d2d1d6;
+  --btn-outline-color: #1a162e;
 }
 @media (max-width: 991.98px) {
   html {
@@ -1399,6 +1404,11 @@ html {
     --top-act-group-bg-color: #eee;
     --top-act-group-separate: #a9a9a9;
     --cate-item-bg-color: #fff;
+  }
+}
+@media (max-width: 767.98px) {
+  html {
+    --auth-bg-color: #fff;
   }
 }
 
@@ -1429,6 +1439,26 @@ html {
 @media (max-width: 767.98px) {
   .top-bar .logo {
     margin-left: auto;
+  }
+}
+@media (max-width: 991.98px) {
+  .top-bar .logo__title {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .top-bar .logo__title {
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 991.98px) {
+  .top-bar .logo__img {
+    width: 28px;
+  }
+}
+@media (max-width: 575.98px) {
+  .top-bar .logo__img {
+    width: 24px;
   }
 }
 
@@ -1759,7 +1789,8 @@ html {
 .footer__social-item {
   width: 35px;
   height: 35px;
-  border-radius: 50%;
+  border-radius: 5px;
+  overflow: hidden;
   transition: scale 0.3s;
 }
 .footer__social-item:hover {
@@ -1890,26 +1921,6 @@ html {
   font-size: 1.375rem;
   font-weight: 700;
   line-height: 145.455%;
-}
-@media (max-width: 991.98px) {
-  .logo__title {
-    font-size: 1.2rem;
-  }
-}
-@media (max-width: 575.98px) {
-  .logo__title {
-    font-size: 1.125rem;
-  }
-}
-@media (max-width: 991.98px) {
-  .logo__img {
-    width: 28px;
-  }
-}
-@media (max-width: 575.98px) {
-  .logo__img {
-    width: 24px;
-  }
 }
 
 .dropdown {
@@ -2323,6 +2334,7 @@ html {
 .btn--outline {
   background: transparent;
   border: 1px solid #d2d1d6;
+  color: var(--btn-outline-color);
 }
 .btn--rounded {
   border-radius: 99px;
@@ -2670,14 +2682,32 @@ html {
 .form {
   width: 100%;
 }
+.form:has(:invalid) .form__submit-btn {
+  opacity: 0.8;
+  pointer-events: none;
+}
 .form__group {
   margin-top: 25px;
+}
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__text-input {
+  border-color: #ed4337;
+  background: rgba(237, 67, 55, 0.1);
+}
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__input-icon {
+  display: none;
+}
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__input-icon-error {
+  display: block;
+  visibility: visible !important;
+}
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__error {
+  display: block;
 }
 .form__text-input {
   padding: 0 12px;
   height: 50px;
   border-radius: 10px;
-  border: 2px solid var(--form__text-input-color);
+  border: 1px solid #d2d1d6;
   display: flex;
   align-items: center;
 }
@@ -2698,10 +2728,22 @@ html {
   }
 }
 .form__input::placeholder {
-  color: var(--form__text-input-color);
+  color: #d2d1d6;
 }
 .form__input-icon {
   margin-left: 12px;
+}
+.form__input-icon-error {
+  width: 20px;
+  display: none;
+}
+.form__error {
+  display: none;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #ed4337;
 }
 .form__checkbox {
   position: relative;
@@ -2870,6 +2912,11 @@ section[class~=show] + .home__content .home__cate-xxl {
   display: flex;
   background: var(--auth-bg-color);
 }
+@supports (-webkit-touch-callout: none) {
+  .auth {
+    min-height: -webkit-fill-available;
+  }
+}
 .auth__intro {
   position: relative;
   flex-grow: 1;
@@ -2887,7 +2934,6 @@ section[class~=show] + .home__content .home__cate-xxl {
 .auth__intro-text {
   max-width: 412px;
   text-align: center;
-  color: var(--Secondary-Color-Secondary-1, #1a162e);
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 144.444%;

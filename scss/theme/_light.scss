@@ -1,8 +1,8 @@
 @use "../abstracts";
 html {
     --text-color: #1a162e;
-    --icon-color: brightness(0) saturate(100%) invert(8%) sepia(10%) saturate(4042%) hue-rotate(212deg) brightness(90%)
-        contrast(95%);
+    --icon-color: brightness(0) saturate(100%) invert(8%) sepia(10%)
+        saturate(4042%) hue-rotate(212deg) brightness(90%) contrast(95%);
     --body-bg: #f6f6f6;
     --header-bg-color: #eee;
     --top-act-group-bg-color: #fff;
@@ -47,8 +47,8 @@ html {
     --filter-bg-color: #fff;
     --filter-shadow-color: 0px 40px 90px rgba(200, 200, 200, 0.4);
     --filter__form-tag-bg-color: #f8f8fb;
-    --filter__arrow-color: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(133deg)
-        brightness(101%) contrast(102%);
+    --filter__arrow-color: brightness(0) saturate(100%) invert(100%) sepia(100%)
+        saturate(0%) hue-rotate(133deg) brightness(101%) contrast(102%);
 
     // Footer
     --footer-bg-color: #eee;
@@ -57,6 +57,10 @@ html {
     --auth-bg-color: #fafafd;
     --auth__content-bg-color: #fff;
 
-    // Form
-    --form__text-input-color: #d2d1d6;
+    @include abstracts.screen(md) {
+        --auth-bg-color: #fff;
+    }
+
+    // Btn
+    --btn-outline-color: #1a162e;
 }

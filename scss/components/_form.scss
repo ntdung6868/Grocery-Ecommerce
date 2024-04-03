@@ -1,17 +1,42 @@
 @use "../abstracts";
 
 .form {
+    &:has(:invalid) &__submit-btn {
+        opacity: 0.8;
+        pointer-events: none;
+    }
+
     width: 100%;
 
     &__group {
         margin-top: 25px;
     }
 
+    &__group:has(:invalid):has(&__input:not(:placeholder-shown)) {
+        .form__text-input {
+            border-color: #ed4337;
+            background: rgba($color: #ed4337, $alpha: 0.1);
+        }
+
+        .form__input-icon {
+            display: none;
+
+            &-error {
+                display: block;
+                visibility: visible !important;
+            }
+        }
+
+        .form__error {
+            display: block;
+        }
+    }
+
     &__text-input {
         padding: 0 12px;
         height: 50px;
         border-radius: 10px;
-        border: 2px solid var(--form__text-input-color);
+        border: 1px solid #d2d1d6;
         display: flex;
         align-items: center;
 
@@ -34,12 +59,26 @@
         }
 
         &::placeholder {
-            color: var(--form__text-input-color);
+            color: #d2d1d6;
         }
 
         &-icon {
             margin-left: 12px;
+
+            &-error {
+                width: 20px;
+                display: none;
+            }
         }
+    }
+
+    &__error {
+        display: none;
+        text-align: left;
+        font-size: 0.875rem;
+        font-weight: 500;
+        margin-top: 10px;
+        color: #ed4337;
     }
 
     &__checkbox {

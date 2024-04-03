@@ -9,22 +9,5 @@
         font-size: 1.375rem;
         font-weight: 700;
         line-height: 145.455%;
-
-        @include abstracts.screen(lg) {
-            font-size: 1.2rem;
-        }
-        @include abstracts.screen(sm) {
-            font-size: 1.125rem;
-        }
-    }
-
-    &__img {
-        @include abstracts.screen(lg) {
-            width: 28px;
-        }
-
-        @include abstracts.screen(sm) {
-            width: 24px;
-        }
     }
 }
