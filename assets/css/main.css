@@ -2689,6 +2689,11 @@ html {
 .form__group {
   margin-top: 25px;
 }
+@media (max-width: 575.98px) {
+  .form__group {
+    margin-top: 18px;
+  }
+}
 .form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__text-input {
   border-color: #ed4337;
   background: rgba(237, 67, 55, 0.1);
@@ -2973,6 +2978,11 @@ section[class~=show] + .home__content .home__cate-xxl {
     overflow-y: auto;
   }
 }
+@media (max-width: 575.98px) {
+  .auth__content {
+    padding: 30px;
+  }
+}
 .auth__content-inner {
   margin: 0 auto;
   width: min(460px, 100%);
@@ -2996,6 +3006,11 @@ section[class~=show] + .home__content .home__cate-xxl {
     line-height: 145.455%;
   }
 }
+@media (max-width: 575.98px) {
+  .auth__heading {
+    margin-top: 30px;
+  }
+}
 .auth__desc {
   padding: 10px 20px 0;
   text-align: center;
@@ -3013,8 +3028,18 @@ section[class~=show] + .home__content .home__cate-xxl {
 .auth__form {
   margin-top: 35px;
 }
+@media (max-width: 575.98px) {
+  .auth__form {
+    margin-top: 15px;
+  }
+}
 .auth__btn-group {
   margin-top: 50px;
+}
+@media (max-width: 575.98px) {
+  .auth__btn-group {
+    margin-top: 30px;
+  }
 }
 .auth__btn {
   width: 100%;
@@ -3025,6 +3050,11 @@ section[class~=show] + .home__content .home__cate-xxl {
 .auth__btn + .auth__btn {
   margin-top: 30px;
   margin-left: 0;
+}
+@media (max-width: 575.98px) {
+  .auth__btn + .auth__btn {
+    margin-top: 10px;
+  }
 }
 .auth__text {
   margin-top: 108px;
@@ -3039,6 +3069,11 @@ section[class~=show] + .home__content .home__cate-xxl {
     margin-top: 56px;
     font-size: 1rem;
     line-height: 150%;
+  }
+}
+@media (max-width: 575.98px) {
+  .auth__text {
+    margin-top: 30px;
   }
 }
 .auth__link {
