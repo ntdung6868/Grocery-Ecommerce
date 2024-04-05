@@ -65,3 +65,50 @@
         }
     }
 }
+
+.product-info {
+    padding: 60px;
+    background: var(--product-info-bg-color);
+    border-radius: 10px;
+
+    &__heading {
+        font-size: 1.625rem;
+        font-weight: 500;
+        line-height: 138.462%;
+    }
+
+    &-left {
+        padding-right: 30px;
+    }
+
+    &__label {
+        margin-top: 30px;
+    }
+
+    &__form__tag {
+        background: var(--product-info__form-tag);
+    }
+}
+
+.product-prop {
+    margin-top: 30px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    &__title {
+        font-size: 1.125rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+
+    &__desc {
+        margin-top: 4px;
+        font-size: 0.875rem;
+        line-height: 142.857%;
+    }
+
+    & + & {
+        margin-top: 27px;
+    }
+}
