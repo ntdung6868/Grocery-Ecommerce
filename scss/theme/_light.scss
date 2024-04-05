@@ -58,11 +58,18 @@ html {
     --auth__content-bg-color: #fff;
     --auth__intro-text-color: #1a162e;
     --auth__heading-color: #1a162e;
-    
+
     @include abstracts.screen(md) {
         --auth-bg-color: #fff;
     }
 
     // Btn
     --btn-outline-color: #1a162e;
+
+    // Product detail
+    --product-detail-bg: #fff;
+
+    // breadcrumbs
+    --breadcrumbs-bg-color: #f6f6f6;
+    --breadcrumbs-shadow-color: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
 }
