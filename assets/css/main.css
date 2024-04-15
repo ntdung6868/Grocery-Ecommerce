@@ -1360,6 +1360,7 @@ html.dark {
   --auth__intro-text-color: #b9babe;
   --auth__heading-color: #b9babe;
   --btn-outline-color: #b9babe;
+  --product-info-text-color: #eee;
   --product-detail-bg: #292e39;
   --product-info-bg-color: #171c28;
   --product-info__form-tag: #292e39;
@@ -1401,6 +1402,7 @@ html {
   --auth__intro-text-color: #1a162e;
   --auth__heading-color: #1a162e;
   --btn-outline-color: #1a162e;
+  --product-info-text-color: #1a162e;
   --product-detail-bg: #fff;
   --product-info-bg-color: #f6f6f6;
   --product-info__form-tag: #ededf6;
@@ -3220,6 +3222,7 @@ section[class~=show] + .home__content .home__cate-xxl {
 }
 
 .product-info {
+  color: var(--product-info-text-color);
   padding: 60px;
   background: var(--product-info-bg-color);
   border-radius: 10px;
@@ -3238,6 +3241,47 @@ section[class~=show] + .home__content .home__cate-xxl {
 .product-info__form__tag {
   background: var(--product-info__form-tag);
 }
+.product-info__card {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #b9babe;
+}
+.product-info__row {
+  display: flex;
+  align-items: center;
+}
+.product-info__price {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 150%;
+}
+.product-info__price-total {
+  margin: 20px 0;
+  font-size: 1.625rem;
+  font-weight: 500;
+  line-height: 138.462%;
+}
+.product-info__tax {
+  margin-left: 10px;
+  padding: 0 8px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), #67b044;
+  color: #67b044;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 142.857%;
+}
+.product-info__add-to-card {
+  flex: 1;
+}
+.product-info__like-btn {
+  margin-left: 19px;
+  width: 46px;
+  height: 46px;
+  border-radius: 6px;
+  border: 1px solid #d2d1d6;
+  background: transparent;
+}
 
 .product-prop {
   margin-top: 30px;
@@ -3252,6 +3296,7 @@ section[class~=show] + .home__content .home__cate-xxl {
 }
 .product-prop__desc {
   margin-top: 4px;
+  font-weight: 300;
   font-size: 0.875rem;
   line-height: 142.857%;
 }
