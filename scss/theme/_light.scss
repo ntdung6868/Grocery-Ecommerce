@@ -35,13 +35,6 @@ html {
     --product-card-shadow-color: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
     --product-card__brand-color: #9e9da8;
 
-    @include abstracts.screen(lg) {
-        --header-bg-color: #fff;
-        --top-act-group-bg-color: #eee;
-        --top-act-group-separate: #a9a9a9;
-        --cate-item-bg-color: #fff;
-    }
-
     //Filter
     --filter-bg-color: #fff;
     --filter-shadow-color: 0px 40px 90px rgba(200, 200, 200, 0.4);
@@ -69,8 +62,22 @@ html {
     --product-detail-bg: #fff;
     --product-info-bg-color: #f6f6f6;
     --product-info__form-tag: #ededf6;
+    --product-container-bg-color: #fff;
 
     // breadcrumbs
     --breadcrumbs-bg-color: #f6f6f6;
     --breadcrumbs-shadow-color: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+
+    @include abstracts.screen(lg) {
+        --header-bg-color: #fff;
+        --top-act-group-bg-color: #eee;
+        --top-act-group-separate: #a9a9a9;
+        --cate-item-bg-color: #fff;
+        --product-detail-bg: #fafafd;
+        --breadcrumbs-bg-color: #fff;
+        --product-info-bg-color: #fff;
+    }
+
+    // Search bar
+    --search-bar-bg-color: #fff;
 }

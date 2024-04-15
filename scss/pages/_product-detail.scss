@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .product-page {
     min-height: 80vh;
     background: var(--product-detail-bg);
@@ -7,15 +9,38 @@
 
 .product-container {
     margin-top: 30px;
+    border-radius: 10px;
+    background: transparent;
+
+    @include abstracts.screen(lg) {
+        background: var(--product-container-bg-color);
+    }
+
+    @include abstracts.screen(md) {
+        margin-top: 20px;
+    }
 }
 
 .product-preview {
     padding: 0 30px;
 
+    @include abstracts.screen(lg) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    @include abstracts.screen(md) {
+        padding: 0 15px;
+    }
+
     &__list {
         display: flex;
         align-items: center;
         overflow: hidden;
+
+        @include abstracts.screen(lg) {
+            flex: 1;
+        }
     }
 
     &__item {
@@ -39,8 +64,16 @@
         align-items: center;
         justify-content: center;
         gap: 16px;
-
         padding: 30px;
+
+        @include abstracts.screen(lg) {
+            flex-direction: column;
+            padding: 15px;
+        }
+
+        @include abstracts.screen(lg) {
+            padding: 10px;
+        }
     }
 
     &__thumb {
@@ -52,6 +85,16 @@
         opacity: 0.9;
         transition: border-color, opacity;
         transition-duration: 0.3s;
+
+        @include abstracts.screen(md) {
+            width: 55px;
+            height: 55px;
+        }
+
+        @include abstracts.screen(sm) {
+            width: 45px;
+            height: 45px;
+        }
 
         &:hover {
             opacity: 1;
@@ -72,14 +115,36 @@
     background: var(--product-info-bg-color);
     border-radius: 10px;
 
+    @include abstracts.screen(xxl) {
+        padding: 40px;
+    }
+
+    @include abstracts.screen(md) {
+        padding: 15px;
+    }
+
     &__heading {
         font-size: 1.625rem;
         font-weight: 500;
         line-height: 138.462%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.125rem;
+            font-weight: 700;
+            line-height: 144.444%;
+        }
     }
 
     &-left {
         padding-right: 30px;
+
+        @include abstracts.screen(xxl) {
+            padding-right: 20px;
+        }
+
+        @include abstracts.screen(xl) {
+            padding-right: 0;
+        }
     }
 
     &__label {

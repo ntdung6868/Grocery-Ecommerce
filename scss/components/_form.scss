@@ -173,6 +173,10 @@
         font-weight: 500;
         line-height: 142.857%;
         cursor: pointer;
+
+        @include abstracts.screen(xl) {
+            flex: 1;
+        }
     }
 
     &__tags {
