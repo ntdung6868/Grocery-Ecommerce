@@ -254,6 +254,7 @@
         line-height: 145.455%;
         color: #9e9da8;
         cursor: pointer;
+        user-select: none;
 
         @include abstracts.screen(md) {
             padding: 0 10px;

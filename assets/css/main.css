@@ -139,10 +139,13 @@ table {
   box-sizing: border-box;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 :root {
   --text-color: #1a162e;
-  --icon-color: brightness(0) saturate(100%) invert(8%) sepia(10%)
-      saturate(4042%) hue-rotate(212deg) brightness(90%) contrast(95%);
+  --icon-color: brightness(0) saturate(100%) invert(8%) sepia(10%) saturate(4042%) hue-rotate(212deg) brightness(90%) contrast(95%);
 }
 
 body {
@@ -177,7 +180,6 @@ select {
   font-family: inherit;
   outline: none;
   border: none;
-  -webkit-tap-highlight-color: transparent;
 }
 
 input,
@@ -2982,6 +2984,81 @@ html {
   line-height: 144.444%;
 }
 
+.text-content {
+  font-size: 1rem;
+  line-height: 100%;
+}
+.text-content h1,
+.text-content h2,
+.text-content h3,
+.text-content h4,
+.text-content h5,
+.text-content h6 {
+  font-weight: 600;
+}
+.text-content h1 {
+  font-size: 1.625rem;
+}
+.text-content h2 {
+  font-size: 1.375rem;
+}
+.text-content h3 {
+  font-size: 1.125rem;
+}
+.text-content h4 {
+  font-size: 1rem;
+}
+.text-content h5 {
+  font-size: 0.875rem;
+}
+.text-content h6 {
+  font-size: 0.75rem;
+}
+.text-content h1,
+.text-content h2,
+.text-content h3,
+.text-content h4,
+.text-content h5,
+.text-content h6,
+.text-content p,
+.text-content blockquote,
+.text-content img,
+.text-content figure,
+.text-content ul,
+.text-content ol,
+.text-content table {
+  margin: 20px 0;
+}
+.text-content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+}
+.text-content img + em {
+  display: block;
+  font-style: italic;
+  text-align: center;
+}
+.text-content a {
+  color: #0071dc;
+  text-decoration: underline;
+}
+.text-content blockquote {
+  background: rgba(119, 218, 230, 0.1);
+  padding: 20px;
+  border-left: 3px solid #77dae6;
+}
+.text-content blockquote p {
+  margin: 0;
+}
+.text-content hr {
+  border: none;
+  height: 1px;
+  margin: 40px 0;
+  background: #9e9da8;
+}
+
 .home {
   display: grid;
   grid-template-columns: 250px 1fr;
@@ -3530,6 +3607,7 @@ section[class~=show] + .home__content .home__cate-xxl {
   line-height: 145.455%;
   color: #9e9da8;
   cursor: pointer;
+  user-select: none;
 }
 @media (max-width: 767.98px) {
   .product-tab__item {
