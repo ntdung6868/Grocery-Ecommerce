@@ -62,11 +62,17 @@ html {
     --product-detail-bg: #fff;
     --product-info-bg-color: #f6f6f6;
     --product-info__form-tag: #ededf6;
-    --product-container-bg-color: #fff;
+    --product-detail-info-content: #fff;
 
     // breadcrumbs
     --breadcrumbs-bg-color: #f6f6f6;
     --breadcrumbs-shadow-color: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+
+    // Search bar
+    --search-bar-bg-color: #fff;
+
+    // review card
+    --review-card-bg-color: #fafafd;
 
     @include abstracts.screen(lg) {
         --header-bg-color: #fff;
@@ -76,8 +82,6 @@ html {
         --product-detail-bg: #fafafd;
         --breadcrumbs-bg-color: #fff;
         --product-info-bg-color: #fff;
+        --review-card-bg-color: #fff;
     }
-
-    // Search bar
-    --search-bar-bg-color: #fff;
 }

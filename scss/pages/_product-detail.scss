@@ -12,7 +12,7 @@
     border-radius: 10px;
     background: transparent;
 
-    @include abstracts.screen(lg) {
+    @include abstracts.screen(md) {
         background: var(--product-container-bg-color);
     }
 
@@ -120,7 +120,15 @@
     }
 
     @include abstracts.screen(md) {
-        padding: 15px;
+        padding: 0 15px 15px;
+    }
+
+    &-content {
+        border-radius: 10px;
+
+        @include abstracts.screen(md) {
+            background: var(--product-detail-info-content);
+        }
     }
 
     &__heading {
@@ -225,5 +233,63 @@
 
     & + & {
         margin-top: 27px;
+    }
+}
+
+.product-tab {
+    &__list {
+        margin-left: -30px;
+        display: flex;
+        align-items: center;
+
+        @include abstracts.screen(md) {
+            margin-left: -10px;
+        }
+    }
+
+    &__item {
+        padding: 0 30px;
+        font-size: 1.375rem;
+        font-weight: 500;
+        line-height: 145.455%;
+        color: #9e9da8;
+        cursor: pointer;
+
+        @include abstracts.screen(md) {
+            padding: 0 10px;
+            font-size: 0.875rem;
+            line-height: 142.857%;
+        }
+
+        &--current {
+            color: var(--text-color);
+        }
+    }
+
+    &__contents {
+        padding-top: 30px;
+    }
+
+    &__content {
+        display: none;
+
+        &--current {
+            display: block;
+        }
+    }
+}
+
+.product-content {
+    &__heading {
+        margin-bottom: 30px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 141.667%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.125rem;
+            font-weight: 500;
+            line-height: 144.444%;
+        }
     }
 }
