@@ -1498,9 +1498,9 @@ html {
 .navbar {
   margin-left: 144px;
 }
-@media (max-width: 1199.98px) {
+@media (max-width: 1399.98px) {
   .navbar {
-    margin-left: 44px;
+    margin-left: auto;
   }
 }
 .navbar__list {
@@ -1786,6 +1786,11 @@ html {
   border-width: 1px 0;
   border-color: var(--act-dropdown-bottom-color);
   border-style: solid;
+}
+.act-dropdown__separate {
+  height: 1px;
+  margin: 20px 0;
+  background: var(--act-dropdown-bottom-color);
 }
 .act-dropdown__row {
   display: flex;
