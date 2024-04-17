@@ -84,4 +84,11 @@ html {
         --product-info-bg-color: #fff;
         --review-card-bg-color: #fff;
     }
+
+    // act-dropdown-header
+    --act-dropdown-bg-color: #fff;
+    --act-dropdown-shadow-color: 0px 40px 90px 20px rgba(200, 200, 200, 0.4);
+    --act-dropdown-bottom-color: #d2d1d6;
+    --act-dropdown-text-color: #1a162e;
+    --act-dropdown__arrow-color: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(133deg) brightness(101%) contrast(102%);
 }

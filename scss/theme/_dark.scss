@@ -68,4 +68,11 @@ html.dark {
 
     // review card
     --review-card-bg-color: #171c28;
+
+    // .act-dropdown
+    --act-dropdown-bg-color: #2f3441;
+    --act-dropdown-shadow-color: 0px 40px 90px 20px rgba(23, 28, 40, 0.4);
+    --act-dropdown-bottom-color: #171c28;
+    --act-dropdown-text-color: #b9babe;
+    --act-dropdown__arrow-color: brightness(0) saturate(100%) invert(13%) sepia(5%) saturate(2853%) hue-rotate(183deg) brightness(93%) contrast(85%);
 }
