@@ -1,0 +1,127 @@
+@use "../abstracts";
+
+.checkout-page {
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+
+    &__breadcrumbs {
+        background: var(--checkout-page__breadcrumbs-bg-color);
+    }
+}
+
+.checkout-container {
+    margin-top: 30px;
+    border-radius: 10px;
+    background: transparent;
+
+    @include abstracts.screen(md) {
+        margin-top: 20px;
+    }
+}
+
+.cart-info {
+    padding: 30px;
+    background: var(--checkout-cart-info-bg-color);
+    border-radius: 20px;
+    box-shadow: var(--checkout-cart-info-shadow-color);
+
+    &__list {
+        margin-top: -30px;
+    }
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--checkout-cart-item-border-color);
+
+    &__thumb {
+        width: 175px;
+        height: 172px;
+        object-fit: contain;
+    }
+
+    &__content {
+        flex: 1;
+        display: flex;
+
+        &-left {
+            flex: 1;
+        }
+
+        &-right {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__title,
+    &__price-wrap {
+        font-size: 1.125rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+
+    &__title {
+        max-width: 374px;
+    }
+
+    &__price-wrap {
+        margin: 16px 0;
+        color: #9e9da8;
+    }
+
+    &__status {
+        color: #67b044;
+    }
+
+    &__ctrl {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-top: auto;
+        min-height: 44px;
+
+        &-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 0 5px;
+
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 150%;
+            color: #9e9da8;
+        }
+    }
+
+    &__input {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        padding: 0 20px;
+        height: 44px;
+        border-radius: 10px;
+        border: 1px solid var(--checkout-cart-item-border-color);
+        font-size: 0.9375rem;
+        font-weight: 500;
+        line-height: 146.667%;
+        cursor: pointer;
+
+        &-btn {
+            display: flex;
+        }
+    }
+
+    &__total-price {
+        font-size: 1.375rem;
+        font-weight: 700;
+        line-height: 145.455%;
+        text-align: right;
+    }
+}

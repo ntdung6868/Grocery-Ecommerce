@@ -31,8 +31,6 @@ a {
 }
 
 button {
-    outline: none;
-    border: none;
     background: transparent;
     cursor: pointer;
 }
@@ -43,6 +41,7 @@ input,
 label,
 textarea,
 select {
+    padding: 0;
     color: inherit;
     font-family: inherit;
     outline: none;

@@ -5,16 +5,13 @@
     background: var(--product-detail-bg);
     display: flex;
     flex-direction: column;
+    padding-bottom: 50px;
 }
 
 .product-container {
     margin-top: 30px;
     border-radius: 10px;
     background: transparent;
-
-    @include abstracts.screen(md) {
-        background: var(--product-container-bg-color);
-    }
 
     @include abstracts.screen(md) {
         margin-top: 20px;

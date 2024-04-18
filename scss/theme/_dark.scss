@@ -75,4 +75,10 @@ html.dark {
     --act-dropdown-bottom-color: #171c28;
     --act-dropdown-text-color: #b9babe;
     --act-dropdown__arrow-color: brightness(0) saturate(100%) invert(13%) sepia(5%) saturate(2853%) hue-rotate(183deg) brightness(93%) contrast(85%);
+
+    // Checkout
+    --checkout-page__breadcrumbs-bg-color: #171c28;
+    --checkout-cart-info-bg-color: #171c28;
+    --checkout-cart-info-shadow-color: 0px 20px 60px 10px rgba(23, 28, 40, 0.2);
+    --checkout-cart-item-border-color: #292e39;
 }
