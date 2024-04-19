@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Checkout | Grocery Mart</title>
+        <title>Shipping | Grocery Mart</title>
 
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
@@ -56,7 +56,12 @@
                             /></a>
                         </li>
                         <li class="breadcrumbs__item">
-                            <a href="#!" class="breadcrumbs__link breadcrumbs__link--current">Checkout</a>
+                            <a href="./checkout.html" class="breadcrumbs__link"
+                                >Checkout <img src="./assets/icons/arrow-right.svg" alt="" class="breadcrumbs__icon"
+                            /></a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#!" class="breadcrumbs__link breadcrumbs__link--current">Shipping</a>
                         </li>
                     </ul>
                 </div>
@@ -65,6 +70,88 @@
                     <div class="row g-3">
                         <div class="col-8 col-lg-12">
                             <div class="cart-info">
+                                <h1 class="cart-info__heading">1. Shipping, arrives between Mon, May 16—Tue, May 24</h1>
+                                <div class="cart-info__separate"></div>
+
+                                <!-- Checkout address -->
+                                <div class="user-address">
+                                    <div class="user-address__top">
+                                        <div>
+                                            <h2 class="user-address__title">Shipping address</h2>
+                                            <p class="user-address__desc">Where should we deliver your order?</p>
+                                        </div>
+                                        <button class="user-address__btn btn btn--primary btn--rounded btn--small">
+                                            <img src="./assets/icons/plus.svg" alt="" />
+                                            Add a new address
+                                        </button>
+                                    </div>
+                                    <div class="user-address__list">
+                                        <!-- Empty message -->
+                                        <!-- <p class="user-address__message">
+                                            Not address yet.
+                                            <a class="user-address__link" href="#!">Add a new address</a>
+                                        </p> -->
+
+                                        <!-- Address card 1 -->
+                                        <article class="address-card">
+                                            <div class="address-card__left">
+                                                <div class="address-card__choose">
+                                                    <label class="address-card__checkbox">
+                                                        <input type="radio" name="shipping-address" checked class="cart-info__checkbox-input" />
+                                                    </label>
+                                                </div>
+                                                <div class="address-card__info">
+                                                    <h3 class="address-card__title">Imran Khan</h3>
+                                                    <p class="address-card__desc">Museum of Rajas, Sylhet Sadar, Sylhet 3100.</p>
+                                                    <ul class="address-card__list">
+                                                        <li class="address-card__list-item">Shipping</li>
+                                                        <li class="address-card__list-item">Delivery from store</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="address-card__right">
+                                                <div class="address-card__ctrl">
+                                                    <button class="address-card__ctrl-btn">
+                                                        <img src="./assets/icons/edit.svg" alt="" class="icon" />
+                                                        Edit
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </article>
+
+                                        <!-- Address card 2 -->
+                                        <article class="address-card">
+                                            <div class="address-card__left">
+                                                <div class="address-card__choose">
+                                                    <label class="address-card__checkbox">
+                                                        <input type="radio" name="shipping-address" class="cart-info__checkbox-input" />
+                                                    </label>
+                                                </div>
+                                                <div class="address-card__info">
+                                                    <h3 class="address-card__title">Imran Khan</h3>
+                                                    <p class="address-card__desc">
+                                                        Al Hamra City (10th Floor), Hazrat Shahjalal Road, Sylhet, Sylhet, Bangladesh
+                                                    </p>
+                                                    <ul class="address-card__list">
+                                                        <li class="address-card__list-item">Shipping</li>
+                                                        <li class="address-card__list-item">Delivery from store</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="address-card__right">
+                                                <div class="address-card__ctrl">
+                                                    <button class="address-card__ctrl-btn">
+                                                        <img src="./assets/icons/edit.svg" alt="" class="icon" />
+                                                        Edit
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="cart-info__separate"></div>
+
+                                <h2 class="cart-info__sub-heading">Items details</h2>
                                 <div class="cart-info__list">
                                     <!-- Cart Item 1 -->
                                     <article class="cart-item">
@@ -204,7 +291,7 @@
                                 </div>
                                 <div class="cart-info__bottom d-md-none">
                                     <div class="row">
-                                        <div class="col-8">
+                                        <div class="col-9">
                                             <div class="cart-info__continue">
                                                 <a href="./" class="cart-info__continue-link">
                                                     <img class="cart-info__continue-icon icon" src="./assets/icons/arrow-down-2.svg" alt="" />
@@ -212,20 +299,8 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="col-4">
-                                            <div class="cart-info__row">
-                                                <span>Subtotal:</span>
-                                                <span>$191.65</span>
-                                            </div>
-                                            <div class="cart-info__row">
-                                                <span>Shipping:</span>
-                                                <span>$10.00</span>
-                                            </div>
-                                            <div class="cart-info__separate"></div>
-                                            <div class="cart-info__row cart-info__row--bold">
-                                                <span>Total</span>
-                                                <span>$201.65</span>
-                                            </div>
+                                        <div class="col-3">
+                                            <a href="#!" class="btn btn--primary btn--rounded cart-info__next-btn">Continue</a>
                                         </div>
                                     </div>
                                 </div>
@@ -250,20 +325,7 @@
                                     <span>Estimated Total</span>
                                     <span class="cart-info__sub">$201.65</span>
                                 </div>
-                                <a href="./shipping.html" class="btn btn--primary btn--rounded cart-info__next-btn">Continue to checkout</a>
-                            </div>
-                            <div class="cart-info">
-                                <a href="#!">
-                                    <article class="gift-item">
-                                        <div class="gift-item__icon-wrap">
-                                            <img src="./assets/icons/gift.svg" alt="" class="gift-item__icon" />
-                                        </div>
-                                        <div class="gift-item__content">
-                                            <h3 class="gift-item__title">Send this order as a gift.</h3>
-                                            <p class="gift-item__desc">Available items will be shipped to your gift recipient.</p>
-                                        </div>
-                                    </article>
-                                </a>
+                                <a href="#!" class="btn btn--primary btn--rounded cart-info__next-btn">Continue to checkout</a>
                             </div>
                         </div>
                     </div>

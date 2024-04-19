@@ -1964,10 +1964,9 @@ html {
   text-align: center;
 }
 .footer__act {
-  display: flex;
-  align-items: center;
   overflow: hidden;
   transition: all 0.2s;
+  gap: 0 !important;
 }
 .footer__act span {
   display: block;
@@ -2030,37 +2029,6 @@ html {
   transform: translateX(5em);
 }
 .footer input:focus + .footer__act:active {
-  transform: scale(0.95);
-}
-.footer__act {
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  transition: all 0.2s;
-}
-.footer__act span {
-  display: block;
-  margin-left: 0.3em;
-  transition: all 0.3s ease-in-out;
-}
-.footer__act svg {
-  display: block;
-  transform-origin: center center;
-  transition: transform 0.3s ease-in-out;
-}
-.footer__act:hover {
-  opacity: 1 !important;
-}
-.footer__act:hover .footer__act-wrapper {
-  animation: fly-1 0.6s ease-in-out infinite alternate;
-}
-.footer__act:hover svg {
-  transform: translateX(1.2em) rotate(45deg) scale(1.1);
-}
-.footer__act:hover span {
-  transform: translateX(5em);
-}
-.footer__act:hover:active {
   transform: scale(0.95);
 }
 
@@ -2471,6 +2439,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
   padding: 0 20px;
   height: 46px;
   border-radius: 6px;
@@ -2483,6 +2452,9 @@ html {
 }
 .btn + .btn {
   margin-left: 20px;
+}
+.btn--small {
+  height: 40px;
 }
 .btn--text {
   background: transparent;
@@ -3809,6 +3781,17 @@ section[class~=show] + .home__content .home__cate-xxl {
     padding: 16px;
   }
 }
+.cart-info__heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 141.667%;
+}
+.cart-info__sub-heading {
+  margin: 30px 0;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
 .cart-info__list {
   margin-top: -30px;
 }
@@ -3889,6 +3872,19 @@ section[class~=show] + .home__content .home__cate-xxl {
     font-weight: 500;
     line-height: 150%;
   }
+}
+.cart-info__checkbox-input {
+  appearance: none;
+  cursor: pointer;
+}
+.cart-info__checkbox-input::before {
+  content: url("../icons/checkbox-uncheck.svg");
+}
+.cart-info__checkbox-input:not(:checked)::before {
+  filter: var(--icon-color);
+}
+.cart-info__checkbox-input:checked::before {
+  content: url("../icons/checkbox-checked.svg");
 }
 
 .cart-item {
@@ -4026,8 +4022,12 @@ section[class~=show] + .home__content .home__cate-xxl {
 }
 .cart-item__act {
   display: flex;
-  align-items: flex-end;
   grid-area: cc;
+}
+@media (max-width: 991.98px) {
+  .cart-item__act {
+    align-items: flex-end;
+  }
 }
 
 .gift-item {
@@ -4054,6 +4054,85 @@ section[class~=show] + .home__content .home__cate-xxl {
   margin-top: 10px;
   font-size: 0.875rem;
   line-height: 142.857%;
+}
+
+.user-address__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.user-address__title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.user-address__desc {
+  margin-top: 4px;
+  font-size: 0.9375rem;
+  line-height: 146.667%;
+}
+.user-address__message {
+  margin-top: 30px;
+  font-weight: 500;
+}
+.user-address__link {
+  color: #0071dc;
+}
+
+.address-card {
+  display: flex;
+  margin-top: 30px;
+  gap: 16px;
+}
+@media (max-width: 767.98px) {
+  .address-card {
+    flex-direction: column;
+  }
+}
+.address-card__left {
+  flex: 1;
+  display: flex;
+  gap: 16px;
+}
+.address-card__title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.address-card__desc {
+  width: min(520px, 90%);
+  margin-top: 4px;
+  font-size: 0.9375rem;
+  line-height: 146.667%;
+}
+.address-card__list {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+  list-style: disc inside;
+  font-size: 0.875rem;
+  line-height: 142.857%;
+}
+@media (max-width: 575.98px) {
+  .address-card__list {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+.address-card__list-item {
+  margin-left: 8px;
+}
+.address-card__ctrl {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.address-card__ctrl-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.125rem;
+  line-height: 144.444%;
 }
 
 /*# sourceMappingURL=main.css.map */
