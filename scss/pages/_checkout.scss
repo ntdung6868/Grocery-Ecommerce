@@ -36,6 +36,12 @@
         font-size: 1.5rem;
         font-weight: 700;
         line-height: 141.667%;
+
+        @include abstracts.screen(md) {
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 150%;
+        }
     }
 
     &__sub-heading {
@@ -234,6 +240,11 @@
 
     &__title {
         max-width: 374px;
+
+        @include abstracts.screen(md) {
+            font-size: 0.875rem;
+            line-height: 142.857%;
+        }
     }
 
     &__price-wrap {
@@ -260,14 +271,18 @@
             align-items: center;
             gap: 10px;
 
-            @include abstracts.screen(xxl) {
-                gap: 5px;
-            }
-
             font-size: 1rem;
             font-weight: 500;
             line-height: 150%;
             color: #9e9da8;
+
+            @include abstracts.screen(xxl) {
+                gap: 5px;
+            }
+
+            &:hover {
+                filter: brightness(0) saturate(100%) invert(28%) sepia(63%) saturate(2946%) hue-rotate(345deg) brightness(103%) contrast(86%);
+            }
 
             &:first-child {
                 margin-right: 10px;
@@ -295,6 +310,11 @@
         line-height: 146.667%;
         cursor: pointer;
 
+        @include abstracts.screen(md) {
+            font-size: 0.875rem;
+            line-height: 142.857%;
+        }
+
         &-btn {
             display: flex;
         }
@@ -308,6 +328,8 @@
         grid-area: bb;
 
         @include abstracts.screen(md) {
+            font-size: 1.125rem;
+            line-height: 144.444%;
             text-align: left;
         }
     }
@@ -336,12 +358,26 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include abstracts.screen(md) {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    &__icon {
+        width: 78%;
     }
 
     &__title {
         font-size: 1.125rem;
         font-weight: 500;
         line-height: 144.444%;
+
+        @include abstracts.screen(md) {
+            font-size: 1rem;
+            line-height: 150%;
+        }
     }
 
     &__desc {
@@ -356,18 +392,34 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 16px;
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 
     &__title {
         font-size: 1.125rem;
         font-weight: 500;
         line-height: 144.444%;
+
+        @include abstracts.screen(md) {
+            font-size: 1rem;
+            line-height: 150%;
+        }
     }
 
     &__desc {
         margin-top: 4px;
         font-size: 0.9375rem;
         line-height: 146.667%;
+
+        @include abstracts.screen(md) {
+            font-size: 0.875rem;
+            line-height: 142.857%;
+        }
     }
 
     &__message {
@@ -399,13 +451,22 @@
         font-size: 1.125rem;
         font-weight: 500;
         line-height: 144.444%;
+
+        @include abstracts.screen(md) {
+            font-size: 1rem;
+            line-height: 150%;
+        }
     }
 
     &__desc {
-        width: min(520px, 90%);
         margin-top: 4px;
         font-size: 0.9375rem;
         line-height: 146.667%;
+
+        @include abstracts.screen(md) {
+            font-size: 0.875rem;
+            line-height: 142.857%;
+        }
     }
 
     &__list {
