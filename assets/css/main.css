@@ -1538,8 +1538,10 @@ html {
 @media (max-width: 767.98px) {
   .navbar__list {
     margin-top: 0;
-    height: calc(100% - 120px);
   }
+}
+.navbar:has(.nav-btn) .navbar__list {
+  height: calc(100% - 120px);
 }
 .navbar__item:hover .dropdown {
   opacity: 1;
@@ -2876,6 +2878,15 @@ html {
   background: var(--form-select-dialog-bg);
   box-shadow: var(--form-select-dialog-shadow);
 }
+@media (max-width: 575.98px) {
+  .form__select-dialog {
+    position: fixed;
+    max-width: initial;
+    max-height: initial;
+    inset: 0;
+    border-radius: 0;
+  }
+}
 .form__select-dialog.show {
   opacity: 1;
   visibility: visible;
@@ -2892,6 +2903,14 @@ html {
 @media (max-width: 767.98px) {
   .form__search {
     height: 47px;
+  }
+}
+@media (max-width: 575.98px) {
+  .form__search {
+    padding: 0 14px;
+    border: 1px solid #d2d1d6;
+    margin: 10px 30px 0;
+    border-radius: 10px;
   }
 }
 .form__search-input {
@@ -2912,6 +2931,16 @@ html {
   padding: 8px 20px;
   font-size: 0.875rem;
 }
+@media (max-width: 767.98px) {
+  .form__option {
+    padding: 14px 20px;
+  }
+}
+@media (max-width: 575.98px) {
+  .form__option {
+    padding: 14px 30px;
+  }
+}
 .form__option--current {
   font-weight: 500;
   background: rgba(255, 183, 0, 0.6);
@@ -2919,6 +2948,20 @@ html {
 .form__option:not(.form__option--current):hover {
   background: var(--form-option-hover-bg);
   cursor: pointer;
+}
+.form__dialog-heading {
+  padding: 20px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-align: center;
+}
+.form__close-dialog {
+  font-size: 1.875rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 18px;
+  opacity: 0.8;
 }
 .form__error {
   display: none;
@@ -3088,7 +3131,7 @@ html {
 .search-bar__input {
   flex: 1;
   padding: 0 15px;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 142.857%;
   height: 100%;

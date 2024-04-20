@@ -80,8 +80,11 @@
 
         @include abstracts.screen(md) {
             margin-top: 0;
-            height: calc(100% - 120px);
         }
+    }
+
+    &:has(.nav-btn) &__list {
+        height: calc(100% - 120px);
     }
 
     &__item {
