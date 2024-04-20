@@ -200,7 +200,11 @@ textarea {
 input:-webkit-autofill,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active,
-input:-webkit-autofill:hover {
+input:-webkit-autofill:hover,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active,
+textarea:-webkit-autofill:hover {
   transition: background-color 1s 9999s;
   -webkit-text-fill-color: var(--text-color);
   caret-color: var(--text-color);
@@ -2767,6 +2771,14 @@ html {
   opacity: 0.8;
   pointer-events: none;
 }
+.form__row {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+}
+.form__row > * {
+  flex: 1;
+}
 .form__group {
   margin-top: 25px;
 }
@@ -2794,31 +2806,46 @@ html {
 .form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__error {
   display: block;
 }
-.form__text-input {
-  padding: 0 12px;
-  height: 50px;
-  border-radius: 10px;
-  border: 1px solid #d2d1d6;
+.form__text-area, .form__text-input {
   display: flex;
   align-items: center;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1px solid #d2d1d6;
 }
-.form__text-input:focus-within {
+.form__text-area:focus-within, .form__text-input:focus-within {
   border-color: #77dae6;
 }
-.form__input {
-  flex-grow: 1;
+.form__text-area {
+  padding: 12px;
+  height: 120px;
+}
+.form__text-area-input {
+  width: 100%;
+  resize: none;
+}
+.form__text-input {
+  height: 50px;
+}
+@media (max-width: 767.98px) {
+  .form__text-input {
+    height: 48px;
+  }
+}
+.form__input, .form__text-area-input {
+  flex: 1;
   height: 100%;
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 144.444%;
 }
 @media (max-width: 767.98px) {
-  .form__input {
+  .form__input, .form__text-area-input {
     font-size: 1rem;
     line-height: 150%;
   }
 }
-.form__input::placeholder {
+.form__input::placeholder, .form__text-area-input::placeholder {
   color: #d2d1d6;
 }
 .form__input-icon {
@@ -3187,8 +3214,19 @@ html {
   opacity: 1;
   visibility: visible;
 }
+.modal--small .modal__content {
+  --content-width: 400px;
+}
+.modal--large .modal__content {
+  --content-width: 1100px;
+}
+.modal__body {
+  padding-right: 10px;
+  max-height: calc(100vh - 180px);
+  overflow-y: auto;
+}
 .modal__content {
-  max-width: 400px;
+  width: min(var(--content-width, 800px), 100% - 40px);
   padding: 30px;
   background: var(--checkout-cart-info-bg-color);
   border-radius: 20px;
@@ -3197,6 +3235,11 @@ html {
 }
 .modal__overlay {
   background: rgba(0, 0, 0, 0.6);
+}
+.modal__heading {
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 141.667%;
 }
 .modal__text {
   font-size: 1.125rem;
@@ -3477,7 +3520,6 @@ section[class~=show] + .home__content .home__cate-xxl {
 }
 .auth__btn + .auth__btn {
   margin-top: 30px;
-  margin-left: 0;
 }
 @media (max-width: 575.98px) {
   .auth__btn + .auth__btn {
@@ -4183,6 +4225,7 @@ section[class~=show] + .home__content .home__cate-xxl {
 }
 .user-address__link {
   color: #0071dc;
+  cursor: pointer;
 }
 
 .address-card {

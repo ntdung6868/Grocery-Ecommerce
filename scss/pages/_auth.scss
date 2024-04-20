@@ -152,7 +152,6 @@
 
     &__btn + &__btn {
         margin-top: 30px;
-        margin-left: 0;
 
         @include abstracts.screen(sm) {
             margin-top: 10px;
