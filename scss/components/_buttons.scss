@@ -16,7 +16,9 @@
     white-space: nowrap;
 
     + .btn {
-        margin-left: 20px;
+        &:not(.btn--no-margin) {
+            margin-left: 20px;
+        }
     }
 
     &--small {
@@ -25,7 +27,6 @@
 
     &--text {
         background: transparent;
-        color: #9e9da8;
         font-weight: 400;
     }
 

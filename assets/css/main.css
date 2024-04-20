@@ -2450,7 +2450,7 @@ html {
   color: #1a162e;
   white-space: nowrap;
 }
-.btn + .btn {
+.btn + .btn:not(.btn--no-margin) {
   margin-left: 20px;
 }
 .btn--small {
@@ -2458,7 +2458,6 @@ html {
 }
 .btn--text {
   background: transparent;
-  color: #9e9da8;
   font-weight: 400;
 }
 .btn--primary {
@@ -3167,6 +3166,55 @@ html {
   height: 1px;
   margin: 40px 0;
   background: #9e9da8;
+}
+
+.modal__overlay, .modal {
+  position: fixed;
+  inset: 0;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity, visibility;
+  transition-duration: 0.2s;
+}
+.modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+.modal__content {
+  max-width: 400px;
+  padding: 30px;
+  background: var(--checkout-cart-info-bg-color);
+  border-radius: 20px;
+  box-shadow: var(--checkout-cart-info-shadow-color);
+  z-index: 1;
+}
+.modal__overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+.modal__text {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.modal__bottom {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media (max-width: 767.98px) {
+  .modal__btn {
+    flex: 1;
+  }
 }
 
 .home {
