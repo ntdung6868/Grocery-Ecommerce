@@ -34,10 +34,15 @@ html.dark {
     --product-card-bg-color: #171c28;
     --product-card-shadow-color: 0px 20px 60px 10px rgba(0, 0, 0, 0.2);
 
+    //Form
+    --form-tag-bg-color: #171c28;
+    --form-select-dialog-bg: #2f3441;
+    --form-select-dialog-shadow: 0 0 5px rgba($color: #fff, $alpha: 0.15);
+    --form-option-hover-bg: #292e39;
+
     //Filter
     --filter-bg-color: #292e39;
     --filter-shadow-color: 0px 40px 90px rgba(0, 0, 0, 0.4);
-    --form-tag-bg-color: #171c28;
     --filter__arrow-color: brightness(0) saturate(100%) invert(13%) sepia(5%) saturate(2853%) hue-rotate(183deg) brightness(93%) contrast(85%);
 
     // Footer

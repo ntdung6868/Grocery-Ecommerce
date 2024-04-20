@@ -388,6 +388,97 @@
                             </div>
                         </div>
                         <div class="form__group">
+                            <label for="city" class="form__label form__label--small">City/District/Town</label>
+                            <div class="form__text-input form__text-input--small">
+                                <input
+                                    type="text"
+                                    name=""
+                                    placeholder="City/District/Town"
+                                    id="city"
+                                    readonly
+                                    class="form__input js-toggle"
+                                    toggle-target="#city-dialog"
+                                />
+                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+
+                                <!-- Select dialog -->
+                                <div id="city-dialog" class="form__select-dialog hide">
+                                    <h2 class="form__dialog-heading d-none d-sm-block">City/District/Town</h2>
+                                    <button class="form__close-dialog d-none d-sm-block js-toggle" toggle-target="#city-dialog">x</button>
+                                    <div class="form__search">
+                                        <input type="text" placeholder="Search" class="form__search-input" />
+                                        <img src="./assets/icons/search.svg" alt="" class="form__search-icon icon" />
+                                    </div>
+                                    <ul class="form__options-list">
+                                        <li class="form__option">An Giang</li>
+                                        <li class="form__option">Ba Ria - Vung Tau</li>
+                                        <li class="form__option">Bac Lieu</li>
+                                        <li class="form__option">Bac Kan</li>
+                                        <li class="form__option">Bac Giang</li>
+                                        <li class="form__option">Bac Ninh</li>
+                                        <li class="form__option">Ben Tre</li>
+                                        <li class="form__option">Binh Duong</li>
+                                        <li class="form__option">Binh Dinh</li>
+                                        <li class="form__option">Binh Phuoc</li>
+                                        <li class="form__option">Binh Thuan</li>
+                                        <li class="form__option">Ca Mau</li>
+                                        <li class="form__option">Cao Bang</li>
+                                        <li class="form__option">Can Tho</li>
+                                        <li class="form__option">Da Nang</li>
+                                        <li class="form__option">Dak Lak</li>
+                                        <li class="form__option">Dak Nong</li>
+                                        <li class="form__option">Dien Bien</li>
+                                        <li class="form__option">Dong Nai</li>
+                                        <li class="form__option">Dong Thap</li>
+                                        <li class="form__option">Gia Lai</li>
+                                        <li class="form__option">Ha Giang</li>
+                                        <li class="form__option">Ha Nam</li>
+                                        <li class="form__option">Ha Noi</li>
+                                        <li class="form__option">Ha Tinh</li>
+                                        <li class="form__option">Hai Duong</li>
+                                        <li class="form__option">Hai Phong</li>
+                                        <li class="form__option">Hau Giang</li>
+                                        <li class="form__option">Hoa Binh</li>
+                                        <li class="form__option form__option--current">Ho Chi Minh</li>
+                                        <li class="form__option">Hung Yen</li>
+                                        <li class="form__option">Khanh Hoa</li>
+                                        <li class="form__option">Kien Giang</li>
+                                        <li class="form__option">Kon Tum</li>
+                                        <li class="form__option">Lai Chau</li>
+                                        <li class="form__option">Lam Dong</li>
+                                        <li class="form__option">Lang Son</li>
+                                        <li class="form__option">Lao Cai</li>
+                                        <li class="form__option">Long An</li>
+                                        <li class="form__option">Nam Dinh</li>
+                                        <li class="form__option">Nghe An</li>
+                                        <li class="form__option">Ninh Binh</li>
+                                        <li class="form__option">Ninh Thuan</li>
+                                        <li class="form__option">Phu Tho</li>
+                                        <li class="form__option">Phu Yen</li>
+                                        <li class="form__option">Quang Binh</li>
+                                        <li class="form__option">Quang Nam</li>
+                                        <li class="form__option">Quang Ngai</li>
+                                        <li class="form__option">Quang Ninh</li>
+                                        <li class="form__option">Quang Tri</li>
+                                        <li class="form__option">Soc Trang</li>
+                                        <li class="form__option">Son La</li>
+                                        <li class="form__option">Tay Ninh</li>
+                                        <li class="form__option">Thai Binh</li>
+                                        <li class="form__option">Thai Nguyen</li>
+                                        <li class="form__option">Thanh Hoa</li>
+                                        <li class="form__option">Thua Thien Hue</li>
+                                        <li class="form__option">Tien Giang</li>
+                                        <li class="form__option">Tra Vinh</li>
+                                        <li class="form__option">Tuyen Quang</li>
+                                        <li class="form__option">Vinh Long</li>
+                                        <li class="form__option">Vinh Phuc</li>
+                                        <li class="form__option">Yen Bai</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="form__error">Please select full</p>
+                        </div>
+                        <div class="form__group">
                             <label for="address" class="form__label form__label--small">Address</label>
                             <div class="form__text-area">
                                 <textarea
@@ -401,70 +492,7 @@
                             </div>
                             <p class="form__error">Address not empty</p>
                         </div>
-                        <div class="form__group">
-                            <label for="city" class="form__label form__label--small">City/District/Town</label>
-                            <div class="form__text-input form__text-input--small">
-                                <input
-                                    type="text"
-                                    name=""
-                                    placeholder="City/District/Town"
-                                    id="city"
-                                    readonly=""
-                                    class="form__input js-toggle"
-                                    toggle-target="#city-dialog"
-                                />
-                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
 
-                                <!-- Select dialog -->
-                                <div id="city-dialog" class="form__select-dialog hide d-none">
-                                    <h2 class="form__dialog-heading d-none d-sm-block">City/District/Town</h2>
-                                    <button class="form__close-dialog d-none d-sm-block js-toggle" toggle-target="#city-dialog">x</button>
-                                    <div class="form__search">
-                                        <input type="text" placeholder="Search" class="form__search-input" />
-                                        <img src="./assets/icons/search.svg" alt="" class="form__search-icon icon" />
-                                    </div>
-                                    <ul class="form__options-list">
-                                        <li class="form__option">Ha Noi</li>
-                                        <li class="form__option form__option--current">Ho Chi Minh</li>
-                                        <li class="form__option">Da Nang</li>
-                                        <li class="form__option">Ha Noi</li>
-                                        <li class="form__option">Ho Chi Minh</li>
-                                        <li class="form__option">Da Nang</li>
-                                        <li class="form__option">Ha Noi</li>
-                                        <li class="form__option">Ho Chi Minh</li>
-                                        <li class="form__option">Da Nang</li>
-                                        <li class="form__option">Ha Noi</li>
-                                        <li class="form__option">Ho Chi Minh</li>
-                                        <li class="form__option">Da Nang</li>
-                                        <li class="form__option">Ha Noi</li>
-                                        <li class="form__option">Ho Chi Minh</li>
-                                        <li class="form__option">Da Nang</li>
-                                        <li class="form__option">Ha Noi</li>
-                                        <li class="form__option">Ho Chi Minh</li>
-                                        <li class="form__option">Da Nang</li>
-                                        <li class="form__option">Ha Noi</li>
-                                        <li class="form__option">Ho Chi Minh</li>
-                                        <li class="form__option">Da Nang</li>
-                                        <li class="form__option">Ha Noi</li>
-                                        <li class="form__option">Ho Chi Minh</li>
-                                        <li class="form__option">Da Nang</li>
-                                        <li class="form__option">Ha Noi</li>
-                                        <li class="form__option">Ho Chi Minh</li>
-                                        <li class="form__option">Da Nang</li>
-                                        <li class="form__option">Ha Noi</li>
-                                        <li class="form__option">Ho Chi Minh</li>
-                                        <li class="form__option">Da Nang</li>
-                                        <li class="form__option">Ha Noi</li>
-                                        <li class="form__option">Ho Chi Minh</li>
-                                        <li class="form__option">Da Nang</li>
-                                        <li class="form__option">Ha Noi</li>
-                                        <li class="form__option">Ho Chi Minh</li>
-                                        <li class="form__option">Da Nang</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <p class="form__error">Please select full</p>
-                        </div>
                         <div class="form__group form__group--inline">
                             <label class="form__checkbox">
                                 <input type="checkbox" name="" id="" class="form__checkbox-input d-none" />
@@ -473,7 +501,7 @@
                         </div>
                     </div>
                     <div class="modal__bottom">
-                        <button class="btn btn--small btn--text modal__btn js-toggle" toggle-target="#add-new-address">Cancel</button>
+                        <button class="btn btn--small btn--text btn--outline modal__btn js-toggle" toggle-target="#add-new-address">Cancel</button>
                         <button class="btn btn--small btn--primary modal__btn btn--no-margin js-toggle" toggle-target="#add-new-address">
                             Create
                         </button>
