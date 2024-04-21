@@ -21,6 +21,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&display=swap" rel="stylesheet" />
 
+        <!-- Animate -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
         <!-- Styles -->
         <link rel="stylesheet" href="./assets/css/main.css" />
 
@@ -364,7 +367,11 @@
                                 <label for="name" class="form__label form__label--small">Name</label>
                                 <div class="form__text-input form__text-input--small">
                                     <input type="text" name="name" id="name" placeholder="Name" class="form__input" required="" minlength="2" />
-                                    <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                                    <img
+                                        src="./assets/icons/form-error.svg"
+                                        alt=""
+                                        class="form__input-icon form__input-icon-error wow animate__heartBeat animate__animated"
+                                    />
                                 </div>
                                 <p class="form__error">Name must be at least 2 characters</p>
                             </div>
@@ -382,7 +389,11 @@
                                         maxlength="10"
                                         pattern="0[0-9]{9}"
                                     />
-                                    <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                                    <img
+                                        src="./assets/icons/form-error.svg"
+                                        alt=""
+                                        class="form__input-icon form__input-icon-error wow animate__heartBeat animate__animated"
+                                    />
                                 </div>
                                 <p class="form__error">Please enter the correct phone number format</p>
                             </div>
@@ -399,7 +410,11 @@
                                     class="form__input js-toggle"
                                     toggle-target="#city-dialog"
                                 />
-                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                                <img
+                                    src="./assets/icons/form-error.svg"
+                                    alt=""
+                                    class="form__input-icon form__input-icon-error wow animate__heartBeat animate__animated"
+                                />
 
                                 <!-- Select dialog -->
                                 <div id="city-dialog" class="form__select-dialog hide">
@@ -488,7 +503,11 @@
                                     class="form__text-area-input"
                                     required=""
                                 ></textarea>
-                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                                <img
+                                    src="./assets/icons/form-error.svg"
+                                    alt=""
+                                    class="form__input-icon form__input-icon-error wow animate__heartBeat animate__animated"
+                                />
                             </div>
                             <p class="form__error">Address not empty</p>
                         </div>
@@ -514,6 +533,7 @@
         <!-- Modal: address edit shipping address -->
         <div id="edit-address" class="modal hide">
             <div class="modal__content" style="--content-width: 650px">
+                <form action="" class="form">
                     <h2 class="modal__heading">Edit shipping address</h2>
                     <div class="modal__body">
                         <div class="form__row">
@@ -521,7 +541,11 @@
                                 <label for="name" class="form__label form__label--small">Name</label>
                                 <div class="form__text-input form__text-input--small">
                                     <input type="text" name="name" id="name" placeholder="Name" class="form__input" required="" minlength="2" />
-                                    <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                                    <img
+                                        src="./assets/icons/form-error.svg"
+                                        alt=""
+                                        class="form__input-icon form__input-icon-error wow animate__heartBeat animate__animated"
+                                    />
                                 </div>
                                 <p class="form__error">Name must be at least 2 characters</p>
                             </div>
@@ -539,7 +563,11 @@
                                         maxlength="10"
                                         pattern="0[0-9]{9}"
                                     />
-                                    <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                                    <img
+                                        src="./assets/icons/form-error.svg"
+                                        alt=""
+                                        class="form__input-icon form__input-icon-error wow animate__heartBeat animate__animated"
+                                    />
                                 </div>
                                 <p class="form__error">Please enter the correct phone number format</p>
                             </div>
@@ -556,7 +584,11 @@
                                     class="form__input js-toggle"
                                     toggle-target="#city-dialog"
                                 />
-                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                                <img
+                                    src="./assets/icons/form-error.svg"
+                                    alt=""
+                                    class="form__input-icon form__input-icon-error wow animate__heartBeat animate__animated"
+                                />
 
                                 <!-- Select dialog -->
                                 <div id="city-dialog" class="form__select-dialog hide">
@@ -645,7 +677,11 @@
                                     class="form__text-area-input"
                                     required=""
                                 ></textarea>
-                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                                <img
+                                    src="./assets/icons/form-error.svg"
+                                    alt=""
+                                    class="form__input-icon form__input-icon-error wow animate__heartBeat animate__animated"
+                                />
                             </div>
                             <p class="form__error">Address not empty</p>
                         </div>
@@ -665,5 +701,18 @@
             </div>
             <div class="modal__overlay"></div>
         </div>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+            integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script>
+            window.dispatchEvent(new Event("template-loaded"));
+            new WOW({
+                animateClass: "animate__animated",
+            }).init();
+        </script>
     </body>
 </html>

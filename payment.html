@@ -21,6 +21,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&display=swap" rel="stylesheet" />
 
+        <!-- Animate -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
         <!-- Styles -->
         <link rel="stylesheet" href="./assets/css/main.css" />
 
@@ -211,14 +214,21 @@
                                 <label>
                                     <article class="payment-item">
                                         <img src="./assets/img/payment/delivery-1.png" alt="" class="payment-item__thumb" />
-                                        <div class="payment-item__info">
-                                            <h3 class="payment-item__title payment-item__title--bold">Fedex Delivery</h3>
-                                            <p class="payment-item__desc payment-item__desc--low">Delivery: 2-3 days work</p>
+                                        <div class="payment-item__content">
+                                            <div class="payment-item__info">
+                                                <h3 class="payment-item__title payment-item__title--bold">Fedex Delivery</h3>
+                                                <p class="payment-item__desc payment-item__desc--low">Delivery: 2-3 days work</p>
+                                            </div>
+                                            <span class="cart-info__checkbox payment-item__checkbox">
+                                                <span class="payment-item__cost">Free</span>
+                                                <input
+                                                    type="radio"
+                                                    name="delivery-method"
+                                                    checked
+                                                    class="cart-info__checkbox-input payment-item__checkbox-input"
+                                                />
+                                            </span>
                                         </div>
-                                        <span class="cart-info__checkbox payment-item__checkbox">
-                                            <span class="payment-item__cost">Free</span>
-                                            <input type="radio" name="delivery-method" checked class="cart-info__checkbox-input" />
-                                        </span>
                                     </article>
                                 </label>
 
@@ -226,14 +236,20 @@
                                 <label>
                                     <article class="payment-item">
                                         <img src="./assets/img/payment/delivery-2.png" alt="" class="payment-item__thumb" />
-                                        <div class="payment-item__info">
-                                            <h3 class="payment-item__title payment-item__title--bold">DHL Delivery</h3>
-                                            <p class="payment-item__desc payment-item__desc--low">Delivery: 2-3 days work</p>
+                                        <div class="payment-item__content">
+                                            <div class="payment-item__info">
+                                                <h3 class="payment-item__title payment-item__title--bold">DHL Delivery</h3>
+                                                <p class="payment-item__desc payment-item__desc--low">Delivery: 2-3 days work</p>
+                                            </div>
+                                            <span class="cart-info__checkbox payment-item__checkbox">
+                                                <span class="payment-item__cost">$12.00</span>
+                                                <input
+                                                    type="radio"
+                                                    name="delivery-method"
+                                                    class="cart-info__checkbox-input payment-item__checkbox-input"
+                                                />
+                                            </span>
                                         </div>
-                                        <span class="cart-info__checkbox payment-item__checkbox">
-                                            <span class="payment-item__cost">$12.00</span>
-                                            <input type="radio" name="delivery-method" class="cart-info__checkbox-input" />
-                                        </span>
                                     </article>
                                 </label>
                             </div>
@@ -241,6 +257,99 @@
                         <div class="col-4 col-lg-12">
                             <div class="cart-info cart-info-left">
                                 <h2 class="cart-info__heading cart-info__heading--lv2">Payment Details</h2>
+                                <p class="cart-info__desc">Complete your purchase item by providing your payment details order.</p>
+                                <form action="" class="form cart-info__form">
+                                    <div class="form__group">
+                                        <label for="name" class="form__label form__label--medium">Email Address</label>
+                                        <div class="form__text-input">
+                                            <input
+                                                type="email"
+                                                name=""
+                                                id=""
+                                                class="form__input"
+                                                placeholder="Email"
+                                                required=""
+                                                pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
+                                            />
+                                            <img
+                                                src="./assets/icons/form-error.svg"
+                                                alt=""
+                                                class="form__input-icon form__input-icon-error wow animate__heartBeat animate__animated"
+                                            />
+                                        </div>
+                                        <p class="form__error">Please enter Email in correct format</p>
+                                    </div>
+                                    <div class="form__group">
+                                        <label for="name" class="form__label form__label--medium">Cardholder's name</label>
+                                        <div class="form__text-input form__text-input--small">
+                                            <input
+                                                type="text"
+                                                name="name"
+                                                id="name"
+                                                placeholder="Name"
+                                                class="form__input"
+                                                required=""
+                                                minlength="2"
+                                            />
+                                            <img
+                                                src="./assets/icons/form-error.svg"
+                                                alt=""
+                                                class="form__input-icon form__input-icon-error wow animate__heartBeat animate__animated"
+                                            />
+                                        </div>
+                                        <p class="form__error">Name must be at least 2 characters</p>
+                                    </div>
+                                    <div class="form__group">
+                                        <label for="number" class="form__label form__label--medium">Card number</label>
+                                        <div class="form__text-input form__text-input--small">
+                                            <input
+                                                type="text"
+                                                name="number"
+                                                id="number"
+                                                placeholder="1234 5678 1234 5678"
+                                                class="form__input"
+                                                required=""
+                                                pattern="[0-9]*"
+                                            />
+                                            <img
+                                                src="./assets/icons/form-error.svg"
+                                                alt=""
+                                                class="form__input-icon form__input-icon-error wow animate__heartBeat animate__animated"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="form__row cart-info__form-row">
+                                        <div class="form__group">
+                                            <div class="form__text-input">
+                                                <input
+                                                    type="text"
+                                                    name="card-expire"
+                                                    id="card-expire"
+                                                    placeholder="MM/YY"
+                                                    class="form__input"
+                                                    required=""
+                                                />
+                                                <img
+                                                    src="./assets/icons/form-error.svg"
+                                                    alt=""
+                                                    class="form__input-icon form__input-icon-error wow animate__heartBeat animate__animated"
+                                                />
+                                            </div>
+                                            <p class="form__error">Password must be at least 6 characters</p>
+                                        </div>
+                                        <div class="form__group">
+                                            <div class="form__text-input">
+                                                <input type="text" name="card-cvc" id="card-cvc" placeholder="CVC" class="form__input" required="" />
+                                                <img
+                                                    src="./assets/icons/form-error.svg"
+                                                    alt=""
+                                                    class="form__input-icon form__input-icon-error wow animate__heartBeat animate__animated"
+                                                />
+                                            </div>
+                                            <p class="form__error">Password must be at least 6 characters</p>
+                                        </div>
+                                    </div>
+                                </form>
                                 <div class="cart-info__row">
                                     <span>Subtotal <span class="cart-info__sub-label">(items)</span></span>
                                     <span class="cart-info__sub">3</span>
@@ -258,7 +367,7 @@
                                     <span>Estimated Total</span>
                                     <span class="cart-info__sub">$201.65</span>
                                 </div>
-                                <a href="#!" class="btn btn--primary btn--rounded cart-info__next-btn">Continue to checkout</a>
+                                <a href="#!" class="btn btn--primary cart-info__next-btn">Pay $465.98</a>
                             </div>
                         </div>
                     </div>
@@ -271,331 +380,17 @@
         <script>
             load("#footer", "./template/footer.html");
         </script>
-
-        <!-- Modal: confirm remove shopping cart item -->
-        <div id="delete-confirm" class="modal modal--small hide">
-            <div class="modal__content">
-                <div class="modal__text">Do you want to remove this item from shopping cart?</div>
-                <div class="modal__bottom">
-                    <button class="btn btn--small btn--text btn--outline modal__btn js-toggle" toggle-target="#delete-confirm">Cancel</button>
-                    <button class="btn btn--small btn--primary modal__btn btn--no-margin js-toggle" toggle-target="#delete-confirm">Delete</button>
-                </div>
-            </div>
-            <div class="modal__overlay js-toggle" toggle-target="#delete-confirm"></div>
-        </div>
-
-        <!-- Modal: address new shipping address -->
-        <div id="add-new-address" class="modal hide">
-            <div class="modal__content" style="--content-width: 650px">
-                <form action="" class="form">
-                    <h2 class="modal__heading">Add new shipping address</h2>
-                    <div class="modal__body">
-                        <div class="form__row">
-                            <div class="form__group">
-                                <label for="name" class="form__label form__label--small">Name</label>
-                                <div class="form__text-input form__text-input--small">
-                                    <input type="text" name="name" id="name" placeholder="Name" class="form__input" required="" minlength="2" />
-                                    <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
-                                </div>
-                                <p class="form__error">Name must be at least 2 characters</p>
-                            </div>
-                            <div class="form__group">
-                                <label for="phone" class="form__label form__label--small">Phone</label>
-                                <div class="form__text-input form__text-input--small">
-                                    <input
-                                        type="tel"
-                                        name="phone"
-                                        id="phone"
-                                        placeholder="Phone"
-                                        class="form__input"
-                                        required=""
-                                        minlength="10"
-                                        maxlength="10"
-                                        pattern="0[0-9]{9}"
-                                    />
-                                    <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
-                                </div>
-                                <p class="form__error">Please enter the correct phone number format</p>
-                            </div>
-                        </div>
-                        <div class="form__group">
-                            <label for="city" class="form__label form__label--small">City/District/Town</label>
-                            <div class="form__text-input form__text-input--small">
-                                <input
-                                    type="text"
-                                    name=""
-                                    placeholder="City/District/Town"
-                                    id="city"
-                                    readonly
-                                    class="form__input js-toggle"
-                                    toggle-target="#city-dialog"
-                                />
-                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
-
-                                <!-- Select dialog -->
-                                <div id="city-dialog" class="form__select-dialog hide">
-                                    <h2 class="form__dialog-heading d-none d-sm-block">City/District/Town</h2>
-                                    <button class="form__close-dialog d-none d-sm-block js-toggle" toggle-target="#city-dialog">×</button>
-                                    <div class="form__search">
-                                        <input type="text" placeholder="Search" class="form__search-input" />
-                                        <img src="./assets/icons/search.svg" alt="" class="form__search-icon icon" />
-                                    </div>
-                                    <ul class="form__options-list">
-                                        <li class="form__option">An Giang</li>
-                                        <li class="form__option">Ba Ria - Vung Tau</li>
-                                        <li class="form__option">Bac Lieu</li>
-                                        <li class="form__option">Bac Kan</li>
-                                        <li class="form__option">Bac Giang</li>
-                                        <li class="form__option">Bac Ninh</li>
-                                        <li class="form__option">Ben Tre</li>
-                                        <li class="form__option">Binh Duong</li>
-                                        <li class="form__option">Binh Dinh</li>
-                                        <li class="form__option">Binh Phuoc</li>
-                                        <li class="form__option">Binh Thuan</li>
-                                        <li class="form__option">Ca Mau</li>
-                                        <li class="form__option">Cao Bang</li>
-                                        <li class="form__option">Can Tho</li>
-                                        <li class="form__option">Da Nang</li>
-                                        <li class="form__option">Dak Lak</li>
-                                        <li class="form__option">Dak Nong</li>
-                                        <li class="form__option">Dien Bien</li>
-                                        <li class="form__option">Dong Nai</li>
-                                        <li class="form__option">Dong Thap</li>
-                                        <li class="form__option">Gia Lai</li>
-                                        <li class="form__option">Ha Giang</li>
-                                        <li class="form__option">Ha Nam</li>
-                                        <li class="form__option">Ha Noi</li>
-                                        <li class="form__option">Ha Tinh</li>
-                                        <li class="form__option">Hai Duong</li>
-                                        <li class="form__option">Hai Phong</li>
-                                        <li class="form__option">Hau Giang</li>
-                                        <li class="form__option">Hoa Binh</li>
-                                        <li class="form__option form__option--current">Ho Chi Minh</li>
-                                        <li class="form__option">Hung Yen</li>
-                                        <li class="form__option">Khanh Hoa</li>
-                                        <li class="form__option">Kien Giang</li>
-                                        <li class="form__option">Kon Tum</li>
-                                        <li class="form__option">Lai Chau</li>
-                                        <li class="form__option">Lam Dong</li>
-                                        <li class="form__option">Lang Son</li>
-                                        <li class="form__option">Lao Cai</li>
-                                        <li class="form__option">Long An</li>
-                                        <li class="form__option">Nam Dinh</li>
-                                        <li class="form__option">Nghe An</li>
-                                        <li class="form__option">Ninh Binh</li>
-                                        <li class="form__option">Ninh Thuan</li>
-                                        <li class="form__option">Phu Tho</li>
-                                        <li class="form__option">Phu Yen</li>
-                                        <li class="form__option">Quang Binh</li>
-                                        <li class="form__option">Quang Nam</li>
-                                        <li class="form__option">Quang Ngai</li>
-                                        <li class="form__option">Quang Ninh</li>
-                                        <li class="form__option">Quang Tri</li>
-                                        <li class="form__option">Soc Trang</li>
-                                        <li class="form__option">Son La</li>
-                                        <li class="form__option">Tay Ninh</li>
-                                        <li class="form__option">Thai Binh</li>
-                                        <li class="form__option">Thai Nguyen</li>
-                                        <li class="form__option">Thanh Hoa</li>
-                                        <li class="form__option">Thua Thien Hue</li>
-                                        <li class="form__option">Tien Giang</li>
-                                        <li class="form__option">Tra Vinh</li>
-                                        <li class="form__option">Tuyen Quang</li>
-                                        <li class="form__option">Vinh Long</li>
-                                        <li class="form__option">Vinh Phuc</li>
-                                        <li class="form__option">Yen Bai</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <p class="form__error">Please select full</p>
-                        </div>
-                        <div class="form__group">
-                            <label for="address" class="form__label form__label--small">Address</label>
-                            <div class="form__text-area">
-                                <textarea
-                                    name="address"
-                                    id="address"
-                                    placeholder="Address (Area and street)"
-                                    class="form__text-area-input"
-                                    required=""
-                                ></textarea>
-                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
-                            </div>
-                            <p class="form__error">Address not empty</p>
-                        </div>
-
-                        <div class="form__group form__group--inline">
-                            <label class="form__checkbox">
-                                <input type="checkbox" name="" id="" class="form__checkbox-input d-none" />
-                                <span class="form__checkbox-label">Set as default address</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="modal__bottom">
-                        <button class="btn btn--small btn--text btn--outline modal__btn js-toggle" toggle-target="#add-new-address">Cancel</button>
-                        <button class="btn btn--small btn--primary modal__btn btn--no-margin js-toggle" toggle-target="#add-new-address">
-                            Create
-                        </button>
-                    </div>
-                </form>
-            </div>
-            <div class="modal__overlay"></div>
-        </div>
-
-        <!-- Modal: address edit shipping address -->
-        <div id="edit-address" class="modal hide">
-            <div class="modal__content" style="--content-width: 650px">
-                <form action="" class="form">
-                    <h2 class="modal__heading">Edit shipping address</h2>
-                    <div class="modal__body">
-                        <div class="form__row">
-                            <div class="form__group">
-                                <label for="name" class="form__label form__label--small">Name</label>
-                                <div class="form__text-input form__text-input--small">
-                                    <input type="text" name="name" id="name" placeholder="Name" class="form__input" required="" minlength="2" />
-                                    <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
-                                </div>
-                                <p class="form__error">Name must be at least 2 characters</p>
-                            </div>
-                            <div class="form__group">
-                                <label for="phone" class="form__label form__label--small">Phone</label>
-                                <div class="form__text-input form__text-input--small">
-                                    <input
-                                        type="tel"
-                                        name="phone"
-                                        id="phone"
-                                        placeholder="Phone"
-                                        class="form__input"
-                                        required=""
-                                        minlength="10"
-                                        maxlength="10"
-                                        pattern="0[0-9]{9}"
-                                    />
-                                    <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
-                                </div>
-                                <p class="form__error">Please enter the correct phone number format</p>
-                            </div>
-                        </div>
-                        <div class="form__group">
-                            <label for="city" class="form__label form__label--small">City/District/Town</label>
-                            <div class="form__text-input form__text-input--small">
-                                <input
-                                    type="text"
-                                    name=""
-                                    placeholder="City/District/Town"
-                                    id="city"
-                                    readonly
-                                    class="form__input js-toggle"
-                                    toggle-target="#city-dialog"
-                                />
-                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
-
-                                <!-- Select dialog -->
-                                <div id="city-dialog" class="form__select-dialog hide">
-                                    <h2 class="form__dialog-heading d-none d-sm-block">City/District/Town</h2>
-                                    <button class="form__close-dialog d-none d-sm-block js-toggle" toggle-target="#city-dialog">×</button>
-                                    <div class="form__search">
-                                        <input type="text" placeholder="Search" class="form__search-input" />
-                                        <img src="./assets/icons/search.svg" alt="" class="form__search-icon icon" />
-                                    </div>
-                                    <ul class="form__options-list">
-                                        <li class="form__option">An Giang</li>
-                                        <li class="form__option">Ba Ria - Vung Tau</li>
-                                        <li class="form__option">Bac Lieu</li>
-                                        <li class="form__option">Bac Kan</li>
-                                        <li class="form__option">Bac Giang</li>
-                                        <li class="form__option">Bac Ninh</li>
-                                        <li class="form__option">Ben Tre</li>
-                                        <li class="form__option">Binh Duong</li>
-                                        <li class="form__option">Binh Dinh</li>
-                                        <li class="form__option">Binh Phuoc</li>
-                                        <li class="form__option">Binh Thuan</li>
-                                        <li class="form__option">Ca Mau</li>
-                                        <li class="form__option">Cao Bang</li>
-                                        <li class="form__option">Can Tho</li>
-                                        <li class="form__option">Da Nang</li>
-                                        <li class="form__option">Dak Lak</li>
-                                        <li class="form__option">Dak Nong</li>
-                                        <li class="form__option">Dien Bien</li>
-                                        <li class="form__option">Dong Nai</li>
-                                        <li class="form__option">Dong Thap</li>
-                                        <li class="form__option">Gia Lai</li>
-                                        <li class="form__option">Ha Giang</li>
-                                        <li class="form__option">Ha Nam</li>
-                                        <li class="form__option">Ha Noi</li>
-                                        <li class="form__option">Ha Tinh</li>
-                                        <li class="form__option">Hai Duong</li>
-                                        <li class="form__option">Hai Phong</li>
-                                        <li class="form__option">Hau Giang</li>
-                                        <li class="form__option">Hoa Binh</li>
-                                        <li class="form__option form__option--current">Ho Chi Minh</li>
-                                        <li class="form__option">Hung Yen</li>
-                                        <li class="form__option">Khanh Hoa</li>
-                                        <li class="form__option">Kien Giang</li>
-                                        <li class="form__option">Kon Tum</li>
-                                        <li class="form__option">Lai Chau</li>
-                                        <li class="form__option">Lam Dong</li>
-                                        <li class="form__option">Lang Son</li>
-                                        <li class="form__option">Lao Cai</li>
-                                        <li class="form__option">Long An</li>
-                                        <li class="form__option">Nam Dinh</li>
-                                        <li class="form__option">Nghe An</li>
-                                        <li class="form__option">Ninh Binh</li>
-                                        <li class="form__option">Ninh Thuan</li>
-                                        <li class="form__option">Phu Tho</li>
-                                        <li class="form__option">Phu Yen</li>
-                                        <li class="form__option">Quang Binh</li>
-                                        <li class="form__option">Quang Nam</li>
-                                        <li class="form__option">Quang Ngai</li>
-                                        <li class="form__option">Quang Ninh</li>
-                                        <li class="form__option">Quang Tri</li>
-                                        <li class="form__option">Soc Trang</li>
-                                        <li class="form__option">Son La</li>
-                                        <li class="form__option">Tay Ninh</li>
-                                        <li class="form__option">Thai Binh</li>
-                                        <li class="form__option">Thai Nguyen</li>
-                                        <li class="form__option">Thanh Hoa</li>
-                                        <li class="form__option">Thua Thien Hue</li>
-                                        <li class="form__option">Tien Giang</li>
-                                        <li class="form__option">Tra Vinh</li>
-                                        <li class="form__option">Tuyen Quang</li>
-                                        <li class="form__option">Vinh Long</li>
-                                        <li class="form__option">Vinh Phuc</li>
-                                        <li class="form__option">Yen Bai</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <p class="form__error">Please select full</p>
-                        </div>
-                        <div class="form__group">
-                            <label for="address" class="form__label form__label--small">Address</label>
-                            <div class="form__text-area">
-                                <textarea
-                                    name="address"
-                                    id="address"
-                                    placeholder="Address (Area and street)"
-                                    class="form__text-area-input"
-                                    required=""
-                                ></textarea>
-                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
-                            </div>
-                            <p class="form__error">Address not empty</p>
-                        </div>
-
-                        <div class="form__group form__group--inline">
-                            <label class="form__checkbox">
-                                <input type="checkbox" name="" id="" class="form__checkbox-input d-none" />
-                                <span class="form__checkbox-label">Set as default address</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="modal__bottom">
-                        <button class="btn btn--small btn--text btn--outline modal__btn js-toggle" toggle-target="#edit-address">Cancel</button>
-                        <button class="btn btn--small btn--primary modal__btn btn--no-margin js-toggle" toggle-target="#edit-address">Create</button>
-                    </div>
-                </form>
-            </div>
-            <div class="modal__overlay"></div>
-        </div>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+            integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script>
+            window.dispatchEvent(new Event("template-loaded"));
+            new WOW({
+                animateClass: "animate__animated",
+            }).init();
+        </script>
     </body>
 </html>

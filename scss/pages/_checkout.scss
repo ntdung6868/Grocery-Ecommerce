@@ -36,6 +36,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        column-gap: 20px;
     }
 
     &__heading {
@@ -43,16 +44,19 @@
         font-weight: 700;
         line-height: 141.667%;
 
-        @include abstracts.screen(md) {
-            font-size: 1rem;
-            font-weight: 500;
-            line-height: 150%;
-        }
-
         &--lv2 {
             font-size: 1.375rem;
             font-weight: 500;
             line-height: 145.455%;
+        }
+
+        &,
+        &--lv2 {
+            @include abstracts.screen(md) {
+                font-size: 1rem;
+                font-weight: 500;
+                line-height: 150%;
+            }
         }
     }
 
@@ -61,6 +65,11 @@
         font-size: 1.125rem;
         font-weight: 500;
         line-height: 144.444%;
+
+        @include abstracts.screen(md) {
+            font-size: 0.9375rem;
+            line-height: 146.667%;
+        }
     }
 
     &__list {
@@ -198,6 +207,14 @@
         gap: 10px;
         font-size: 1.125rem;
         line-height: 144.444%;
+    }
+
+    &__form {
+        margin-bottom: 30px;
+
+        &-row {
+            column-gap: 20px;
+        }
     }
 }
 
@@ -536,7 +553,22 @@
 
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+
+    @include abstracts.screen(md) {
+        align-items: flex-start;
+    }
+
+    &__content {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
 
     &__info {
         flex: 1;
@@ -547,18 +579,41 @@
         font-weight: 500;
         line-height: 144.444%;
 
+        @include abstracts.screen(md) {
+            font-size: 1rem;
+            line-height: 150%;
+        }
+
         &--bold {
             font-weight: 700;
+
+            @include abstracts.screen(md) {
+                font-size: 0.9375rem;
+                font-weight: 500;
+                line-height: 146.667%;
+            }
         }
     }
 
     &__desc {
         margin-top: 4px;
+        font-size: 0.9375rem;
+        line-height: 146.667%;
+
+        @include abstracts.screen(md) {
+            font-size: 0.875rem;
+            line-height: 142.857%;
+        }
 
         &--low {
             font-size: 1rem;
             line-height: 150%;
             color: #9e9da8;
+
+            @include abstracts.screen(md) {
+                font-size: 0.875rem;
+                line-height: 142.857%;
+            }
         }
     }
 
@@ -573,6 +628,7 @@
         justify-self: flex-end;
         padding: 10px;
         cursor: pointer;
+        user-select: none;
 
         &-text {
             font-size: 0.9375rem;
@@ -596,6 +652,9 @@
     }
 
     & .cart-item {
+        pointer-events: none;
+        user-select: none;
+
         &__ctrl--md-block {
             @include abstracts.screen(xxl) {
                 flex-direction: column;
@@ -609,6 +668,7 @@
 
         &:last-child {
             border: none;
+            padding-bottom: 0;
         }
     }
 
@@ -616,6 +676,11 @@
         width: 70px;
         height: 54px;
         margin-right: 20px;
+
+        @include abstracts.screen(md) {
+            width: 60px;
+            height: 46px;
+        }
     }
 
     &__cost {
@@ -625,8 +690,14 @@
         line-height: 144.444%;
     }
 
-    &__checkbox:has(:checked) &__cost {
-        font-weight: 500;
-        color: initial;
+    &__checkbox {
+        &-input:not(:checked)::before {
+            filter: brightness(0) saturate(100%) invert(66%) sepia(12%) saturate(190%) hue-rotate(206deg) brightness(94%) contrast(89%);
+        }
+
+        &:has(:checked) .payment-item__cost {
+            font-weight: 500;
+            color: var(--text-color);
+        }
     }
 }
