@@ -4168,7 +4168,7 @@ section[class~=show] + .home__content .home__cate-xxl {
   padding: 30px 0;
   border-bottom: 1px solid var(--checkout-cart-item-border-color);
 }
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .cart-item {
     column-gap: 16px;
   }
@@ -4196,7 +4196,7 @@ section[class~=show] + .home__content .home__cate-xxl {
 .cart-item__content {
   flex: 1;
   display: grid;
-  column-gap: 30px;
+  column-gap: 20px;
   row-gap: 16px;
   grid-template-areas: "aa aa aa bb" "aa aa aa cc";
 }
