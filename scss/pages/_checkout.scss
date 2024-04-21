@@ -32,6 +32,12 @@
         padding: 16px;
     }
 
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     &__heading {
         font-size: 1.5rem;
         font-weight: 700;
@@ -41,6 +47,12 @@
             font-size: 1rem;
             font-weight: 500;
             line-height: 150%;
+        }
+
+        &--lv2 {
+            font-size: 1.375rem;
+            font-weight: 500;
+            line-height: 145.455%;
         }
     }
 
@@ -56,6 +68,16 @@
 
         @include abstracts.screen(md) {
             margin-top: -16px;
+        }
+
+        &-none {
+            display: none;
+            margin-top: 30px;
+            grid-column: 1 / -1;
+
+            &.show {
+                display: block;
+            }
         }
     }
 
@@ -149,6 +171,9 @@
     }
 
     &__checkbox {
+        display: flex;
+        align-items: center;
+
         &-input {
             appearance: none;
             cursor: pointer;
@@ -165,6 +190,14 @@
                 content: url("../icons/checkbox-checked.svg");
             }
         }
+    }
+
+    &__edit-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.125rem;
+        line-height: 144.444%;
     }
 }
 
@@ -201,7 +234,7 @@
     &__content {
         flex: 1;
         display: grid;
-        column-gap: 50px;
+        column-gap: 30px;
         row-gap: 16px;
         grid-template-areas:
             "aa aa aa bb"
@@ -492,13 +525,108 @@
         height: 100%;
         display: flex;
         align-items: flex-end;
+    }
+}
 
-        &-btn {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.125rem;
-            line-height: 144.444%;
+.payment-item {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    background: var(--payment-item-bg-color);
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__info {
+        flex: 1;
+    }
+
+    &__title {
+        font-size: 1.125rem;
+        font-weight: 500;
+        line-height: 144.444%;
+
+        &--bold {
+            font-weight: 700;
         }
+    }
+
+    &__desc {
+        margin-top: 4px;
+
+        &--low {
+            font-size: 1rem;
+            line-height: 150%;
+            color: #9e9da8;
+        }
+    }
+
+    &-view-details {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__show-details {
+        display: flex;
+        align-items: center;
+        justify-self: flex-end;
+        padding: 10px;
+        cursor: pointer;
+
+        &-text {
+            font-size: 0.9375rem;
+            line-height: 146.667%;
+        }
+
+        &-icon {
+            display: none;
+            rotate: 180deg;
+        }
+    }
+
+    &:has(.show) &__show-details {
+        &-text {
+            display: none;
+        }
+
+        &-icon {
+            display: block;
+        }
+    }
+
+    & .cart-item {
+        &__ctrl--md-block {
+            @include abstracts.screen(xxl) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        &:first-child {
+            border-top: 1px solid var(--checkout-cart-item-border-color);
+        }
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    &__thumb {
+        width: 70px;
+        height: 54px;
+        margin-right: 20px;
+    }
+
+    &__cost {
+        font-size: 1.125rem;
+        font-weight: 500;
+        color: #9e9da8;
+        line-height: 144.444%;
+    }
+
+    &__checkbox:has(:checked) &__cost {
+        font-weight: 500;
+        color: initial;
     }
 }

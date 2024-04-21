@@ -1382,6 +1382,7 @@ html.dark {
   --checkout-cart-info-shadow-color: 0px 20px 60px 10px rgba(23, 28, 40, 0.2);
   --checkout-cart-item-border-color: #292e39;
   --checkout-gift-item__icon-wrap-bg-color: #292e39;
+  --payment-item-bg-color: #292e39;
 }
 
 html {
@@ -1440,6 +1441,7 @@ html {
   --checkout-cart-info-shadow-color: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
   --checkout-cart-item-border-color: #d2d1d6;
   --checkout-gift-item__icon-wrap-bg-color: rgba(118, 68, 225, 0.1);
+  --payment-item-bg-color: #f6f6f6;
 }
 @media (max-width: 767.98px) {
   html {
@@ -3985,6 +3987,11 @@ section[class~=show] + .home__content .home__cate-xxl {
     padding: 16px;
   }
 }
+.cart-info__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .cart-info__heading {
   font-size: 1.5rem;
   font-weight: 700;
@@ -3996,6 +4003,11 @@ section[class~=show] + .home__content .home__cate-xxl {
     font-weight: 500;
     line-height: 150%;
   }
+}
+.cart-info__heading--lv2 {
+  font-size: 1.375rem;
+  font-weight: 500;
+  line-height: 145.455%;
 }
 .cart-info__sub-heading {
   margin: 30px 0;
@@ -4010,6 +4022,14 @@ section[class~=show] + .home__content .home__cate-xxl {
   .cart-info__list {
     margin-top: -16px;
   }
+}
+.cart-info__list-none {
+  display: none;
+  margin-top: 30px;
+  grid-column: 1/-1;
+}
+.cart-info__list-none.show {
+  display: block;
 }
 .cart-info__bottom {
   margin-top: 30px;
@@ -4084,6 +4104,10 @@ section[class~=show] + .home__content .home__cate-xxl {
     line-height: 150%;
   }
 }
+.cart-info__checkbox {
+  display: flex;
+  align-items: center;
+}
 .cart-info__checkbox-input {
   appearance: none;
   cursor: pointer;
@@ -4096,6 +4120,13 @@ section[class~=show] + .home__content .home__cate-xxl {
 }
 .cart-info__checkbox-input:checked::before {
   content: url("../icons/checkbox-checked.svg");
+}
+.cart-info__edit-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.125rem;
+  line-height: 144.444%;
 }
 
 .cart-item {
@@ -4132,7 +4163,7 @@ section[class~=show] + .home__content .home__cate-xxl {
 .cart-item__content {
   flex: 1;
   display: grid;
-  column-gap: 50px;
+  column-gap: 30px;
   row-gap: 16px;
   grid-template-areas: "aa aa aa bb" "aa aa aa cc";
 }
@@ -4401,12 +4432,86 @@ section[class~=show] + .home__content .home__cate-xxl {
   display: flex;
   align-items: flex-end;
 }
-.address-card__ctrl-btn {
+
+.payment-item {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 20px;
+  background: var(--payment-item-bg-color);
   display: flex;
   align-items: center;
-  gap: 10px;
+  flex-wrap: wrap;
+}
+.payment-item__info {
+  flex: 1;
+}
+.payment-item__title {
   font-size: 1.125rem;
+  font-weight: 500;
   line-height: 144.444%;
+}
+.payment-item__title--bold {
+  font-weight: 700;
+}
+.payment-item__desc {
+  margin-top: 4px;
+}
+.payment-item__desc--low {
+  font-size: 1rem;
+  line-height: 150%;
+  color: #9e9da8;
+}
+.payment-item-view-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.payment-item__show-details {
+  display: flex;
+  align-items: center;
+  justify-self: flex-end;
+  padding: 10px;
+  cursor: pointer;
+}
+.payment-item__show-details-text {
+  font-size: 0.9375rem;
+  line-height: 146.667%;
+}
+.payment-item__show-details-icon {
+  display: none;
+  rotate: 180deg;
+}
+.payment-item:has(.show) .payment-item__show-details-text {
+  display: none;
+}
+.payment-item:has(.show) .payment-item__show-details-icon {
+  display: block;
+}
+@media (max-width: 1399.98px) {
+  .payment-item .cart-item__ctrl--md-block {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.payment-item .cart-item:first-child {
+  border-top: 1px solid var(--checkout-cart-item-border-color);
+}
+.payment-item .cart-item:last-child {
+  border: none;
+}
+.payment-item__thumb {
+  width: 70px;
+  height: 54px;
+  margin-right: 20px;
+}
+.payment-item__cost {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #9e9da8;
+  line-height: 144.444%;
+}
+.payment-item__checkbox:has(:checked) .payment-item__cost {
+  font-weight: 500;
+  color: initial;
 }
 
 /*# sourceMappingURL=main.css.map */
