@@ -1922,25 +1922,6 @@ html {
 .footer__help-text {
   margin-top: 70px;
 }
-.footer__form {
-  margin-top: 10px;
-  display: flex;
-  column-gap: 20px;
-}
-.footer__form-input {
-  flex-grow: 1;
-  border: 1px solid #d2d1d6;
-  padding: 10px 20px;
-  border-radius: 10px;
-  font-size: 1rem;
-  line-height: 146.667%;
-  background: #fff;
-}
-@media (max-width: 1199.98px) {
-  .footer__form-input {
-    flex-grow: 0;
-  }
-}
 .footer__social {
   margin-top: 30px;
 }
@@ -1997,7 +1978,7 @@ html {
   transform: translateX(1.2em) rotate(45deg) scale(1.1);
 }
 .footer__act:hover span {
-  transform: translateX(5em);
+  transform: translateX(15em);
 }
 .footer__act:hover:active {
   transform: scale(0.95);
@@ -2801,6 +2782,9 @@ html {
   align-items: center;
   justify-content: space-between;
 }
+.form__group-footer {
+  margin-top: 0;
+}
 .form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__text-input {
   border-color: #ed4337;
   background: rgba(237, 67, 55, 0.1);
@@ -2836,6 +2820,9 @@ html {
 .form__text-input {
   position: relative;
   height: 50px;
+}
+.form__text-input-footer {
+  height: 46px !important;
 }
 @media (max-width: 767.98px) {
   .form__text-input {
@@ -3084,6 +3071,16 @@ html {
 }
 .form__tag:hover {
   color: var(--text-color);
+}
+.form-footer {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 767.98px) {
+  .form-footer {
+    flex-direction: column;
+  }
 }
 
 .messages {

@@ -33,6 +33,10 @@
             align-items: center;
             justify-content: space-between;
         }
+
+        &-footer {
+            margin-top: 0;
+        }
     }
 
     &__group:has(:invalid):has(&__input:not(:placeholder-shown)) {
@@ -81,6 +85,10 @@
     &__text-input {
         position: relative;
         height: 50px;
+
+        &-footer {
+            height: 46px !important;
+        }
 
         @include abstracts.screen(md) {
             height: 48px;
@@ -357,6 +365,16 @@
 
         &:hover {
             color: var(--text-color);
+        }
+    }
+
+    &-footer {
+        margin-top: 10px;
+        display: flex;
+        gap: 20px;
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
         }
     }
 }

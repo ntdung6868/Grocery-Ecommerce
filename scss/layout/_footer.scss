@@ -61,26 +61,6 @@
         margin-top: 70px;
     }
 
-    &__form {
-        margin-top: 10px;
-        display: flex;
-        column-gap: 20px;
-
-        &-input {
-            flex-grow: 1;
-            border: 1px solid #d2d1d6;
-            padding: 10px 20px;
-            border-radius: 10px;
-            font-size: 1rem;
-            line-height: 146.667%;
-            background: #fff;
-
-            @include abstracts.screen(xl) {
-                flex-grow: 0;
-            }
-        }
-    }
-
     &__social {
         margin-top: 30px;
 
@@ -148,7 +128,7 @@
             }
 
             & span {
-                transform: translateX(5em);
+                transform: translateX(15em);
             }
 
             &:active {

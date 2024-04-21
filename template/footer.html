@@ -11,16 +11,26 @@
                     est explicabo.
                 </p>
                 <p class="footer__help-text">Receive product news and updates.</p>
-                <form action="" class="footer__form">
-                    <input
-                        type="email"
-                        class="footer__form-input"
-                        name="mail"
-                        id="mail"
-                        placeholder="Enter your email"
-                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                        required
-                    />
+                <form action="" class="form form-footer">
+                    <div class="form__group form__group-footer">
+                        <div class="form__text-input form__text-input-footer">
+                            <input
+                                type="email"
+                                name=""
+                                id=""
+                                class="form__input"
+                                placeholder="Email"
+                                required=""
+                                pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
+                            />
+                            <img
+                                src="./assets/icons/form-error.svg"
+                                alt=""
+                                class="form__input-icon form__input-icon-error wow animate__heartBeat animate__animated"
+                            />
+                        </div>
+                        <p class="form__error">Please enter Email in correct format</p>
+                    </div>
                     <button type="submit" class="btn btn--primary footer__act">
                         <div class="footer__act-wrapper">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
