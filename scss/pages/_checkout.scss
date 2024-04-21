@@ -60,6 +60,12 @@
         }
     }
 
+    &__desc {
+        margin-top: 6px;
+        font-size: 0.9375rem;
+        line-height: 146.667%;
+    }
+
     &__sub-heading {
         margin: 30px 0;
         font-size: 1.125rem;
@@ -92,6 +98,10 @@
 
     &__bottom {
         margin-top: 30px;
+
+        @include abstracts.screen(md) {
+            margin-top: -16px;
+        }
     }
 
     &__continue {
@@ -215,6 +225,10 @@
         &-row {
             column-gap: 20px;
         }
+    }
+
+    &__check-all {
+        padding: 30px 0;
     }
 }
 
