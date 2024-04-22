@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Add card | Grocery Mart</title>
+        <title>Edit personal info | Grocery Mart</title>
 
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
@@ -172,7 +172,7 @@
                                             </a>
 
                                             <h2 class="profile-info__heading">
-                                                <a href="./profile.html">Add credit or debit card</a>
+                                                <a href="./profile.html">Personal info</a>
                                             </h2>
                                         </div>
 
@@ -186,7 +186,7 @@
                                                             type="text"
                                                             name=""
                                                             id="first-name"
-                                                            placeholder="First name"
+                                                            placeholder="Nguyen"
                                                             class="form__input"
                                                             required
                                                             autofocus
@@ -202,7 +202,7 @@
                                                             type="text"
                                                             name=""
                                                             id="last-name"
-                                                            placeholder="Last name"
+                                                            placeholder="Tri Dung"
                                                             class="form__input"
                                                             required
                                                         />
@@ -215,16 +215,16 @@
                                             <!-- Form row 2 -->
                                             <div class="form__row">
                                                 <div class="form__group">
-                                                    <label for="card-number" class="form__label form-card__label"> Card Number </label>
+                                                    <label for="email-adress" class="form__label form-card__label"> Email address </label>
                                                     <div class="form__text-input">
                                                         <input
-                                                            type="text"
+                                                            type="email"
                                                             name=""
-                                                            id="card-number"
-                                                            placeholder="1234 5678 1234 5678"
+                                                            id="email-adress"
                                                             class="form__input"
-                                                            required=""
-                                                            pattern="[0-9]*"
+                                                            placeholder="ntdung6868@gmail.com"
+                                                            required
+                                                            pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
                                                         />
                                                         <img
                                                             src="./assets/icons/form-error.svg"
@@ -232,54 +232,14 @@
                                                             class="form__input-icon form__input-icon-error wow animate__heartBeat animate__animated animate__animated"
                                                         />
                                                     </div>
-                                                    <p class="form__error">Please enter a valid card number</p>
+                                                    <p class="form__error">Please enter a valid email address</p>
                                                 </div>
-                                                <div class="form__group">
-                                                    <label for="expiration-date" class="form__label form-card__label"> Expiration Date </label>
-                                                    <div class="form__text-input">
-                                                        <input
-                                                            type="text"
-                                                            name=""
-                                                            id="expiration-date"
-                                                            placeholder="MM/YY"
-                                                            class="form__input"
-                                                            required
-                                                        />
-                                                        <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
-                                                    </div>
-                                                    <p class="form__error">Please enter a valid expiration date</p>
-                                                </div>
-                                            </div>
 
-                                            <!-- Form row 3 -->
-                                            <div class="form__row">
-                                                <div class="form__group">
-                                                    <label for="card-cvc" class="form__label form-card__label"> CVC </label>
-                                                    <div class="form__text-input">
-                                                        <input
-                                                            type="text"
-                                                            name=""
-                                                            id="card-cvc"
-                                                            placeholder="123"
-                                                            class="form__input"
-                                                            required
-                                                            minlength="3"
-                                                            maxlength="3"
-                                                            pattern="[0-9]{3}"
-                                                        />
-                                                        <img
-                                                            src="./assets/icons/form-error.svg"
-                                                            alt=""
-                                                            class="form__input-icon form__input-icon-error wow animate__heartBeat animate__animated animate__animated"
-                                                        />
-                                                    </div>
-                                                    <p class="form__error">Please enter a valid CVC</p>
-                                                </div>
                                                 <div class="form__group">
                                                     <label for="phone-number" class="form__label form-card__label"> Phone Number </label>
                                                     <div class="form__text-input">
                                                         <input
-                                                            type="text"
+                                                            type="tel"
                                                             name=""
                                                             id="phone-number"
                                                             placeholder="+008 01234 56789"
@@ -295,21 +255,13 @@
                                                             class="form__input-icon form__input-icon-error wow animate__heartBeat animate__animated animate__animated"
                                                         />
                                                     </div>
-                                                    <p class="form__error">Please enter the correct phone number format</p>
+                                                    <p class="form__error">Please enter a valid phone number</p>
                                                 </div>
-                                            </div>
-
-                                            <div class="form__group">
-                                                <label for="set-default-card" class="form__label form-card__label"> Card Preferences </label>
-                                                <label class="form__checkbox">
-                                                    <input type="checkbox" name="" id="set-default-card" class="form__checkbox-input d-none" />
-                                                    <span class="form__checkbox-label">Set as default card</span>
-                                                </label>
                                             </div>
 
                                             <div class="form-card__bottom">
                                                 <a class="btn btn--text" href="./profile.html">Cancel</a>
-                                                <button class="btn btn--primary btn--rounded">Save card</button>
+                                                <button class="btn btn--primary btn--rounded">Save</button>
                                             </div>
                                         </form>
                                     </div>
