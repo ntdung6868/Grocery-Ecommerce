@@ -3169,6 +3169,17 @@ html {
     flex-direction: column;
   }
 }
+.form-card__label {
+  margin-bottom: 16px;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.form-card__bottom {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
 
 .messages {
   width: 100%;
@@ -4908,6 +4919,11 @@ section[class~=show] + .home__content .home__cate-xxl {
     padding: 16px;
   }
 }
+.profile-info__top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .profile-info__heading {
   font-size: 1.5rem;
   font-weight: 700;
@@ -4924,6 +4940,9 @@ section[class~=show] + .home__content .home__cate-xxl {
   margin: 6px 0 16px;
   font-size: 0.9375rem;
   line-height: 146.667%;
+}
+.profile-info__back-arrow {
+  width: 30px;
 }
 
 .account-info {

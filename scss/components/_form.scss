@@ -377,4 +377,19 @@
             flex-direction: column;
         }
     }
+
+    &-card {
+        &__label {
+            margin-bottom: 16px;
+            font-size: 1.125rem;
+            font-weight: 500;
+            line-height: 144.444%;
+        }
+
+        &__bottom {
+            margin-top: 30px;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
 }
