@@ -430,6 +430,10 @@
         width: 300px;
         top: 50px;
         right: -15px;
+
+        @include abstracts.screen(md) {
+            width: 250px;
+        }
     }
 }
 
@@ -469,10 +473,18 @@
 }
 
 .user-menu {
+    @include abstracts.screen(md) {
+        padding: 16px;
+    }
+
     &__top {
         display: flex;
         align-items: center;
         column-gap: 20px;
+
+        @include abstracts.screen(md) {
+            column-gap: 10px;
+        }
     }
 
     &__avatar {
@@ -481,6 +493,11 @@
         object-fit: cover;
         border-radius: 8px;
         box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
+
+        @include abstracts.screen(md) {
+            width: 60px;
+            height: 60px;
+        }
     }
 
     &__name {
@@ -506,6 +523,10 @@
 
         font-weight: 500;
         line-height: 150%;
+
+        @include abstracts.screen(md) {
+            padding: 12px 0 12px 12px;
+        }
 
         &:hover {
             background: var(--user-menu__link-bg-color);
