@@ -1383,6 +1383,7 @@ html.dark {
   --checkout-cart-item-border-color: #292e39;
   --checkout-gift-item__icon-wrap-bg-color: #292e39;
   --payment-item-bg-color: #292e39;
+  --user-menu__link-bg-color: #292e39;
 }
 
 html {
@@ -1442,6 +1443,7 @@ html {
   --checkout-cart-item-border-color: #d2d1d6;
   --checkout-gift-item__icon-wrap-bg-color: rgba(118, 68, 225, 0.1);
   --payment-item-bg-color: #f6f6f6;
+  --user-menu__link-bg-color: #ebebeb;
 }
 @media (max-width: 767.98px) {
   html {
@@ -1712,15 +1714,19 @@ html {
   background: var(--top-act-group-separate);
 }
 .top-act__user {
-  width: 50px;
-  height: 50px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
+  position: relative;
+}
+.top-act__user:hover .act-dropdown-user {
+  opacity: 1;
+  visibility: visible;
 }
 .top-act__avatar {
-  width: 100%;
+  width: 50px;
+  height: 50px;
   object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
 }
 @media (max-width: 767.98px) {
   .top-act__sign-up {
@@ -1778,6 +1784,9 @@ html {
   right: 95px;
   filter: var(--act-dropdown__arrow-color);
 }
+.act-dropdown__arrow-user {
+  right: 15px;
+}
 .act-dropdown__top {
   margin-bottom: 30px;
   display: flex;
@@ -1833,6 +1842,11 @@ html {
 .act-dropdown__checkout-btn {
   min-width: 218px;
 }
+.act-dropdown-user {
+  width: 300px;
+  top: 50px;
+  right: -15px;
+}
 
 .cart-preview-item {
   margin-bottom: 10px;
@@ -1863,6 +1877,42 @@ html {
   font-size: 0.9375rem;
   font-weight: 500;
   line-height: 146.667%;
+}
+
+.user-menu__top {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+.user-menu__avatar {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
+}
+.user-menu__name {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.user-menu__id {
+  font-size: 0.9375rem;
+  line-height: 146.667%;
+}
+.user-menu__list {
+  margin-top: 30px;
+}
+.user-menu__link {
+  padding: 15px 0 15px 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 500;
+  line-height: 150%;
+}
+.user-menu__link:hover {
+  background: var(--user-menu__link-bg-color);
 }
 
 .footer {
@@ -2512,9 +2562,6 @@ html {
 }
 .like-btn:not(.like-btn--liked) .like-btn__icon--liked {
   display: none;
-}
-.like-btn__icon--liked {
-  margin-top: 8px;
 }
 .like-btn--liked .like-btn__icon {
   display: none;
