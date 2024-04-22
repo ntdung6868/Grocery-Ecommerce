@@ -112,3 +112,35 @@
         }
     }
 }
+
+.account-info {
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--account-info-bg-color);
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &__icon {
+        flex-shrink: 0;
+        width: 54px;
+        height: 54px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        background: var(--account-info__icon-bg-color);
+    }
+
+    &__title {
+        font-size: 0.9375rem;
+        font-weight: 500;
+        line-height: 146.667%;
+    }
+
+    &__desc {
+        font-size: 0.875rem;
+        line-height: 142.857%;
+    }
+}
