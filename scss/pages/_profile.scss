@@ -83,4 +83,32 @@
             display: flex;
         }
     }
+
+    &-info {
+        padding: 30px;
+        background: var(--profile-info-bg-color);
+        border-radius: 20px;
+        box-shadow: var(--profile-info-shadow-color);
+
+        @include abstracts.screen(md) {
+            padding: 16px;
+        }
+
+        &__heading {
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 141.667%;
+            @include abstracts.screen(md) {
+                font-size: 1rem;
+                font-weight: 500;
+                line-height: 150%;
+            }
+        }
+
+        &__desc {
+            margin: 6px 0 16px;
+            font-size: 0.9375rem;
+            line-height: 146.667%;
+        }
+    }
 }

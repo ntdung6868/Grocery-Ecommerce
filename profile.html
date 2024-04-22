@@ -49,7 +49,7 @@
 
                 <div class="profile-container">
                     <div class="row g-3">
-                        <div class="col-3 col-xxl-4 col-lg-12">
+                        <div class="col-3 col-xxl-4 col-lg-5 col-md-12">
                             <aside class="profile__sidebar">
                                 <!-- User -->
                                 <div class="profile-user">
@@ -159,8 +159,78 @@
                                 </div>
                             </aside>
                         </div>
-                        <div class="col-9 col-xxl-8 col-lg-12">
-                            <div class="cart-info"></div>
+                        <div class="col-9 col-xxl-8 col-lg-7 col-md-12">
+                            <div class="profile-info">
+                                <div class="row row-cols-1 g-3">
+                                    <div class="col">
+                                        <h2 class="profile-info__heading">My Wallet</h2>
+                                        <p class="profile-info__desc">Payment methods</p>
+                                        <div class="payment-card__list row row-cols-3 row-cols-xxl-2 row-cols-lg-1 gy-2">
+                                            <!-- Payment card 1 -->
+                                            <div class="col col-md-10 col-sm-12">
+                                                <article class="payment-card" style="--bg-color: #1e2e69">
+                                                    <img src="./assets/img/card/plane-bg.svg" alt="" class="payment-card__img" />
+                                                    <div class="payment-card__top">
+                                                        <img src="./assets/img/card/plane.svg" alt="" />
+                                                        <span class="payment-card__type">FeatherCard</span>
+                                                    </div>
+                                                    <div class="payment-card__number">1234 4567 8901 2221</div>
+                                                    <div class="payment-card__bottom">
+                                                        <div>
+                                                            <p class="payment-card__label">Card Holder</p>
+                                                            <p class="payment-card__value">Tri Dung Nguyen</p>
+                                                        </div>
+                                                        <div class="payment-card__expired">
+                                                            <p class="payment-card__label">Expired</p>
+                                                            <p class="payment-card__value">10/26</p>
+                                                        </div>
+                                                        <img src="./assets/img/card/master-card.svg" alt="" class="payment-card__logo" />
+                                                    </div>
+                                                </article>
+                                            </div>
+
+                                            <!-- Payment card 2 -->
+                                            <div class="col col-md-10 col-sm-12">
+                                                <article class="payment-card" style="--bg-color: #354151">
+                                                    <img src="./assets/img/card/leaf-bg.svg" alt="" class="payment-card__img" />
+                                                    <div class="payment-card__top">
+                                                        <img src="./assets/img/card/leaf.svg" alt="" />
+                                                        <span class="payment-card__type">FeatherCard</span>
+                                                    </div>
+                                                    <div class="payment-card__number">9885 8234 9123 6621</div>
+                                                    <div class="payment-card__bottom">
+                                                        <div>
+                                                            <p class="payment-card__label">Card Holder</p>
+                                                            <p class="payment-card__value">Tri Dung Nguyen</p>
+                                                        </div>
+                                                        <div class="payment-card__expired">
+                                                            <p class="payment-card__label">Expired</p>
+                                                            <p class="payment-card__value">11/28</p>
+                                                        </div>
+                                                        <img src="./assets/img/card/master-card.svg" alt="" class="payment-card__logo" />
+                                                    </div>
+                                                </article>
+                                            </div>
+
+                                            <!-- Add new payment card -->
+                                            <div class="col col-md-10">
+                                                <a class="new-card" href="./add-new-card.html">
+                                                    <img src="./assets/icons/plus.svg" alt="" class="new-card__icon icon" />
+                                                    <p class="new-card__text">Add New Card</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <h2 class="profile-info__heading">Account info</h2>
+                                        <p class="profile-info__desc">Addresses, contact information and password</p>
+                                    </div>
+                                    <div class="col">
+                                        <h2 class="profile-info__heading">Lists</h2>
+                                        <p class="profile-info__desc">2 items - Primary</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

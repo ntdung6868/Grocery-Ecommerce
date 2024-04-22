@@ -1,0 +1,82 @@
+@use "../abstracts";
+
+.payment-card {
+    position: relative;
+    padding: 20px;
+    height: 100%;
+    color: #fff;
+    background: var(--bg-color);
+    border-radius: 10px;
+    overflow: hidden;
+    user-select: none;
+
+    &__img {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__top,
+    &__bottom {
+        display: flex;
+        align-items: center;
+        column-gap: 6px;
+    }
+
+    &__type {
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 142.857%;
+    }
+
+    &__number {
+        margin-top: 37px;
+        font-size: 1.125rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+
+    &__bottom {
+        margin-top: 20px;
+        justify-content: space-between;
+    }
+
+    &__label {
+        font-size: 0.5rem;
+        font-weight: 500;
+        line-height: 175%;
+    }
+
+    &__value {
+        font-size: 0.625rem;
+        font-weight: 500;
+        line-height: 140%;
+    }
+
+    &__logo {
+        z-index: 1;
+    }
+
+    &__list {
+        justify-content: center;
+    }
+}
+
+.new-card {
+    height: 100%;
+    min-height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 14px;
+    border-radius: 10px;
+    border: 1px dashed #d2d1d6;
+
+    &__text {
+        color: #d2d1d6;
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 142.857%;
+    }
+}
